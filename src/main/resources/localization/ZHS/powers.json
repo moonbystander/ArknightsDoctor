@@ -1,0 +1,28 @@
+{
+  "ArknightsDoctorMod:Laevatain": {
+    "NAME": "莱万汀",
+    "DESCRIPTIONS": [
+      "莱万汀！"
+    ]
+  },
+  "BecomeAbyssPower": {
+    "NAME": "积水成渊",
+    "DESCRIPTIONS": [
+      "成渊 #b",
+      " 层。"
+    ]
+  },
+  "BecomeMountainPower": {
+    "NAME": "积土成山",
+    "DESCRIPTIONS": [
+      "成山 #b",
+      " 层。"
+    ]
+  },
+  "RainOriginatedPower": {
+    "NAME": "风雨兴焉",
+    "DESCRIPTIONS": [
+      "风雨 "
+    ]
+  }
+}

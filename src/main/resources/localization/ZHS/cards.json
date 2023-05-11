@@ -1,0 +1,42 @@
+{
+  "ArknightsDoctorMod:1": {
+    "NAME": "开棺",
+    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  },
+  "ArknightsDoctorMod:2": {
+    "NAME": "红",
+    "DESCRIPTION": "干员 NL 造成 !D! 点伤害，并将所有敌人击晕一回合 NL 消耗 。"
+  },
+  "ArknightsDoctorMod:3": {
+    "NAME": "阿米娅",
+    "DESCRIPTION": "干员 NL 造成 !D! 点伤害  。"
+  },
+  "ArknightsDoctorMod:4": {
+    "NAME": "我与我最后的赌注",
+    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  },
+  "ArknightsDoctorMod:5": {
+    "NAME": "凯尔希",
+    "DESCRIPTION": "干员 NL 造成10点伤害，获得10点格挡和 !M! 点再生 NL 消耗 。"
+  },
+  "ArknightsDoctorMod:6": {
+    "NAME": "赛雷娅",
+    "DESCRIPTION": "干员 NL 获得 !M! 层缓冲 NL 消耗 。"
+  },
+  "ArknightsDoctorMod:7": {
+    "NAME": "开棺",
+    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  },
+  "ArknightsDoctorMod:8": {
+    "NAME": "开棺",
+    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  },
+  "ArknightsDoctorMod:9": {
+    "NAME": "开棺",
+    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  },
+  "ArknightsDoctorMod:": {
+  "NAME": "",
+  "DESCRIPTION": ""
+  }
+}
