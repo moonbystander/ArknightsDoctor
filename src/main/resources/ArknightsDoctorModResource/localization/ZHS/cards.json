@@ -1,22 +1,22 @@
 {
-  "ArknightsDoctorMod:1": {
-    "NAME": "开棺",
-    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  "ArknightsDoctorMod:Beginning": {
+    "NAME": "开棺 no",
+    "DESCRIPTION": "消耗 获得1点能量 。"
   },
   "ArknightsDoctorMod:2": {
-    "NAME": "红",
+    "NAME": "红 no",
     "DESCRIPTION": "干员 NL 造成 !D! 点伤害，并将所有敌人击晕一回合 NL 消耗 。"
   },
   "ArknightsDoctorMod:3": {
-    "NAME": "阿米娅",
+    "NAME": "阿米娅 no",
     "DESCRIPTION": "干员 NL 造成 !D! 点伤害  。"
   },
   "ArknightsDoctorMod:4": {
-    "NAME": "我与我最后的赌注",
+    "NAME": "我与我最后的赌注 no",
     "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
   },
   "ArknightsDoctorMod:5": {
-    "NAME": "凯尔希",
+    "NAME": "凯尔希 no",
     "DESCRIPTION": "干员 NL 造成10点伤害，获得10点格挡和 !M! 点再生 NL 消耗 。"
   },
   "ArknightsDoctorMod:6": {
@@ -35,8 +35,12 @@
     "NAME": "开棺",
     "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
   },
-  "ArknightsDoctorMod:": {
-  "NAME": "",
-  "DESCRIPTION": ""
+  "ArknightsDoctorMod:Ace": {
+  "NAME": "祝你们前路无阻",
+  "DESCRIPTION": "移除 ，使用后获得 壁垒 和50点格挡"
+  },
+  "ArknightsDoctorMod:red": {
+    "NAME": "墙上的小红帽",
+    "DESCRIPTION": "下次受到伤害时，闪避伤害并对敌人造成7点伤害"
   }
 }

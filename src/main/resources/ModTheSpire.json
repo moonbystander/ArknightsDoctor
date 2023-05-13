@@ -1,0 +1,14 @@
+{
+  "modid": "ArknightsDoctorMod",
+  "name": "明日方舟博士",
+  "author_list": [
+    "博士"
+  ],
+  "description": "明日方舟博士MOD",
+  "version": "0.0.1",
+  "sts_version": "08-15-2021",
+  "dependencies": [
+    "basemod",
+    "stslib"
+  ]
+}
