@@ -1,4 +1,13 @@
 {
+  "ArknightsDoctorMod:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害"
+  },
+  "ArknightsDoctorMod:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡"
+  }
+  ,
   "ArknightsDoctorMod:Beginning": {
     "NAME": "开棺 no",
     "DESCRIPTION": "消耗 获得1点能量 。"
@@ -7,19 +16,36 @@
     "NAME": "红 no",
     "DESCRIPTION": "干员 NL 造成 !D! 点伤害，并将所有敌人击晕一回合 NL 消耗 。"
   },
-  "ArknightsDoctorMod:3": {
-    "NAME": "阿米娅 no",
-    "DESCRIPTION": "干员 NL 造成 !D! 点伤害  。"
+  "ArknightsDoctorMod:Amiya": {
+    "NAME": "阿米娅",
+    "DESCRIPTION": "干员 罗德岛公开领导人阿米娅，将与你并肩作战。 NL 加油，博士。",
+    "OPTIONS": ["ArknightsDoctorMod:SpiritBurst","ArknightsDoctorMod:Chimera"]
+  },
+  "ArknightsDoctorMod:ViolinSolo": {
+    "NAME": "小提琴独奏",
+    "DESCRIPTION": "回忆 消耗 NL 获得 !M! 点再生 "
+  }
+  ,
+  "ArknightsDoctorMod:NoTimeResting": {
+    "NAME": "还不能休息！",
+    "DESCRIPTION": "博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去3点生命，下回合额外获得1能量和 !M! 张牌"
+
   },
   "ArknightsDoctorMod:4": {
     "NAME": "我与我最后的赌注 no",
     "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
   },
-  "ArknightsDoctorMod:5": {
-    "NAME": "凯尔希 no",
-    "DESCRIPTION": "干员 NL 造成10点伤害，获得10点格挡和 !M! 点再生 NL 消耗 。"
+  "ArknightsDoctorMod:Kaltsit": {
+    "NAME": "凯尔希",
+    "DESCRIPTION": "干员 罗德岛医疗部门负责人，凯尔希。 NL 她来自过去。她属于现在。",
+    "OPTIONS": ["ArknightsDoctorMod:Command:StructuralFortification","ArknightsDoctorMod:Command:TacticalCoordination","ArknightsDoctorMod:Command:Meltdown"]
   },
-  "ArknightsDoctorMod:6": {
+  "ArknightsDoctorMod:Command:StructuralFortification":{
+    "NAME": "指令：结构加固",
+    "DESCRIPTION": "获得 !M! 点敏捷并获得 !B! 点格挡"
+  }
+  ,
+  "ArknightsDoctorMod:Saria": {
     "NAME": "赛雷娅",
     "DESCRIPTION": "干员 NL 获得 !M! 层缓冲 NL 消耗 。"
   },
@@ -42,5 +68,10 @@
   "ArknightsDoctorMod:red": {
     "NAME": "墙上的小红帽",
     "DESCRIPTION": "下次受到伤害时，闪避伤害并对敌人造成7点伤害"
+  },
+  "ArknightsDoctorMod:Ceobe": {
+    "NAME": "刻俄柏",
+    "DESCRIPTION": "干员 刻俄柏，随时准备打坏人。NL 能敲一个两个三个，又快又准。",
+    "OPTIONS": ["ArknightsDoctorMod:ReallyColdAxe","ArknightsDoctorMod:ReallyHotKnives","ArknightsDoctorMod:ReallyHeavySpear"]
   }
 }

@@ -1,20 +1,26 @@
 package ArknightsDoctorMod.characters;
 
 
+import ArknightsDoctorMod.cards.attack.Strike;
 import ArknightsDoctorMod.helper.DoctorHelper;
 
 
+import ArknightsDoctorMod.modcore.ArknightsDoctorMod;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
@@ -23,13 +29,13 @@ import java.util.ArrayList;
 
 public class Doctor extends CustomPlayer {
 
-    // 火堆的人物立绘（行动前）
+    // 火堆的人物立绘（行动前） √
     private static final String MY_CHARACTER_SHOULDER_1 = DoctorHelper.getResourcePath()+"/img/char/shoulder.png";
-    // 火堆的人物立绘（行动后）
+    // 火堆的人物立绘（行动后） √
     private static final String MY_CHARACTER_SHOULDER_2 = DoctorHelper.getResourcePath()+"/img/char/shoulder.png";
-    // 人物死亡图像
+    // 人物死亡图像 √
     private static final String CORPSE_IMAGE = DoctorHelper.getResourcePath()+"/img/char/corpse.png";
-    // 战斗界面左下角能量图标的每个图层
+    // 战斗界面左下角能量图标的每个图层 √
     private static final String[] ORB_TEXTURES = new String[]{
             DoctorHelper.getResourcePath()+"img/UI/orb/layer5.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer4.png",
@@ -43,10 +49,37 @@ public class Doctor extends CustomPlayer {
             DoctorHelper.getResourcePath()+"img/UI/orb/layer2d.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer1d.png"
     };
-
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
-
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("ArknightsDoctorMod:Doctor");
+
+
+    public CardGroup OperatorsWaiting=new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);;
+
+    //Doctor机制：信赖度
+    public int trust=0;
+    public int increaseTrust(int amount){
+        if (amount < 0 ){
+            amount=0;
+        }
+        trust += amount;
+
+        if (trust >200){
+            trust = 200;
+        }
+        return trust;
+    }
+
+    public int reduceTrust(int amount){
+        if (amount < 0){
+            amount = 0;
+        }
+        trust-=amount;
+        if (trust < 0 ){
+            trust=0;
+        }
+        return trust;
+    }
+
 
 
     public Doctor(String name){
@@ -58,116 +91,128 @@ public class Doctor extends CustomPlayer {
 
         // 初始化你的人物，如果你的人物只有一张图，那么第一个参数填写你人物图片的路径。
         this.initializeClass(
-                DoctorHelper.RESOURCEPATH+"img/char/character.png", // 人物图片
+                DoctorHelper.RESOURCEPATH+"img/char/doctor.png", // 人物图片
                 MY_CHARACTER_SHOULDER_2, MY_CHARACTER_SHOULDER_1,
                 CORPSE_IMAGE, // 人物死亡图像
                 this.getLoadout(),
                 0.0F, 0.0F,
                 200.0F, 220.0F, // 人物碰撞箱大小，越大的人物模型这个越大
-                new EnergyManager(2) // 初始每回合的能量
+                new EnergyManager(3) // 初始每回合的能量
         );
 
     }
 
 
+    //初始卡，4打击4防御，1阿米娅1凯尔希
     @Override
     public ArrayList<String> getStartingDeck() {
         return null;
     }
 
+    //初始遗物，莱瓦汀、PRTS
     @Override
     public ArrayList<String> getStartingRelics() {
         return null;
     }
 
+    //
     @Override
     public CharSelectInfo getLoadout() {
-        return null;
+        return new CharSelectInfo(characterStrings.NAMES[0], characterStrings.TEXT[0], 65, 65, 0, 99, 5, this, this.getStartingRelics(), this.getStartingDeck(), false);
     }
 
     @Override
     public String getTitle(PlayerClass playerClass) {
-        return null;
+        return characterStrings.NAMES[0];
     }
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return null;
+        return Enums.DOCTOR_CARD;
     }
 
+    //
     @Override
     public Color getCardRenderColor() {
-        return null;
+        return ArknightsDoctorMod.GetCharColor();
     }
 
+
+    //没牌
     @Override
     public AbstractCard getStartCardForEvent() {
-        return null;
+        return new Strike();
     }
 
     @Override
     public Color getCardTrailColor() {
-        return null;
+        return ArknightsDoctorMod.GetCharColor();
     }
 
     @Override
     public int getAscensionMaxHPLoss() {
-        return 0;
+        return 5;
     }
 
     @Override
     public BitmapFont getEnergyNumFont() {
-        return null;
+        return FontHelper.energyNumFontBlue;
     }
 
     @Override
     public void doCharSelectScreenSelectEffect() {
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
 
     }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return null;
+        return "ATTACK_HEAVY";
     }
 
     @Override
     public String getLocalizedCharacterName() {
-        return null;
+        return characterStrings.NAMES[0];
     }
 
     @Override
     public AbstractPlayer newInstance() {
-        return null;
+        return new Doctor(this.name);
     }
 
     @Override
     public String getSpireHeartText() {
-        return null;
+        return characterStrings.TEXT[1];
     }
 
     @Override
     public Color getSlashAttackColor() {
-        return null;
+        return ArknightsDoctorMod.GetCharColor();
     }
 
+    //打击心脏时的特效
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[0];
+        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL};
     }
 
     @Override
     public String getVampireText() {
-        return null;
+        return Vampires.DESCRIPTIONS[0];
     }
 
     public static class Enums {
+
+        @SpireEnum(name = "ArknightsDoctorMod:OPERATORS")
+        public static AbstractCard.CardType OPERATORS;
+
         @SpireEnum
         public static PlayerClass DOCTOR_PLAYER;
 
         @SpireEnum(name = "ArknightsDoctor_COLOR")
-        public static AbstractCard.CardColor EXAMPLE_CARD;
+        public static AbstractCard.CardColor DOCTOR_CARD;
 
         @SpireEnum(name = "ArknightsDoctor_COLOR")
-        public static CardLibrary.LibraryType EXAMPLE_LIBRARY;
+        public static CardLibrary.LibraryType DOCTOR_LIBRARY;
     }
 }
