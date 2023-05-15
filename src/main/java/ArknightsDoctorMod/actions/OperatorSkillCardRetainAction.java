@@ -26,6 +26,7 @@ public class OperatorSkillCardRetainAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == this.startingDuration && this.group.contains(this.targetCard)) {
+            //修改卡牌能量消耗
             targetCard.modifyCostForCombat(-1);
         }
         this.tickDuration();

@@ -21,7 +21,7 @@ import java.util.List;
 
 public class LaevatainPower  extends AbstractPower implements DamageModApplyingPower  {
     // 能力的ID
-    public static String POWER_ID = DoctorHelper.MakeAssetPath("LaevatainPower");
+    public static String POWER_ID = DoctorHelper.MakePath("LaevatainPower");
     // 能力的本地化字段
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     // 能力的名称
@@ -67,6 +67,7 @@ public class LaevatainPower  extends AbstractPower implements DamageModApplyingP
     }
 
     //目标：修改伤害对所有怪物生效，伤害增加330%
+    //暂时不知道怎么写。。
     @Override
     public List<AbstractDamageModifier> modsToPush(DamageInfo damageInfo, Object o, List<AbstractDamageModifier> list) {
 

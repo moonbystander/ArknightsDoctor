@@ -4,6 +4,8 @@ import ArknightsDoctorMod.characters.Doctor;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
+
+//信赖增加
 public class GetTrustAction extends AbstractGameAction {
 
     public GetTrustAction(AbstractCreature target,int amount){

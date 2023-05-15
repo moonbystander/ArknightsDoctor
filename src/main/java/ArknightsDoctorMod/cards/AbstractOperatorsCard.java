@@ -1,19 +1,18 @@
 package ArknightsDoctorMod.cards;
 
-import ArknightsDoctorMod.actions.ChooseOperatorsSkillCardsToHandAction;
+import ArknightsDoctorMod.actions.CardMoveAction;
+import ArknightsDoctorMod.actions.ChooseCardsToHandAction;
 import ArknightsDoctorMod.actions.GetTrustAction;
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import basemod.abstracts.CustomCard;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
 public abstract class AbstractOperatorsCard extends CustomCard {
 
@@ -21,12 +20,15 @@ public abstract class AbstractOperatorsCard extends CustomCard {
     public ArrayList<AbstractCard> options=new ArrayList<>();
     public int redeployment=4;
 
+    //默认再部署回合4
     public AbstractOperatorsCard(String id, String name, String img, int cost, String rawDescription, CardColor color, CardRarity rarity, CardTarget target) {
-        super(id, name, img, cost, rawDescription, Doctor.Enums.OPERATORS , color, rarity, target);
+        super(id, name, img, cost, rawDescription, CardType.SKILL , color, rarity, target);
+        this.tags.add(Doctor.Enums.OPERATORS);
     }
 
     public AbstractOperatorsCard(String id, String name, String img, int cost, String rawDescription, CardColor color, CardRarity rarity, CardTarget target,int redeployment) {
-        super(id, name, img, cost, rawDescription, Doctor.Enums.OPERATORS , color, rarity, target);
+        super(id, name, img, cost, rawDescription, CardType.SKILL , color, rarity, target);
+        this.tags.add(Doctor.Enums.OPERATORS);
         this.redeployment=redeployment;
     }
 
@@ -36,7 +38,7 @@ public abstract class AbstractOperatorsCard extends CustomCard {
         this.addToBot(new GetTrustAction(abstractPlayer,1));
         //如果绑定的技能牌存在，选择一张加入手牌
         if (options.size() > 0 ){
-            this.addToBot(new ChooseOperatorsSkillCardsToHandAction(options,"选择一张技能牌加入手牌",true));
+            this.addToBot(new ChooseCardsToHandAction(options,"选择一张技能牌加入手牌",true));
         }
 
     }
@@ -47,12 +49,11 @@ public abstract class AbstractOperatorsCard extends CustomCard {
     @Override
     public void onMoveToDiscard() {
         Doctor doctor= (Doctor) AbstractDungeon.player;
-        doctor.OperatorsWaiting.addToTop(this);
-        doctor.discardPile.removeCard(this);
-
-
-
+        this.addToBot(new CardMoveAction(this,doctor.discardPile,doctor.OperatorsWaiting));
+        addRedeploymentPowerAction();
     }
+
+    public abstract void addRedeploymentPowerAction();
 
     //向列表中添加一张牌
     public void addCardToOptions(AbstractCard c){

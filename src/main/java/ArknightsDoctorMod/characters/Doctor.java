@@ -204,7 +204,7 @@ public class Doctor extends CustomPlayer {
     public static class Enums {
 
         @SpireEnum(name = "ArknightsDoctorMod:OPERATORS")
-        public static AbstractCard.CardType OPERATORS;
+        public static AbstractCard.CardTags OPERATORS;
 
         @SpireEnum
         public static PlayerClass DOCTOR_PLAYER;

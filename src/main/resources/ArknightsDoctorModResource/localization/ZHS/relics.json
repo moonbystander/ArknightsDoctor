@@ -10,10 +10,10 @@
     "NAME": "PRTS",
     "FLAVOR": "————身份确认，权限水平：8 NL ————欢迎回家，博士",
     "DESCRIPTIONS": [
-      "每场战斗第二回合从抽牌堆中选择一名干员加入手牌，第三回合获得10点格挡"
+      "每场战斗第一回合从抽牌堆中选择一名干员加入手牌，第二回合获得10点格挡，第三回合获得1点能量"
     ]
   },
-  "ArknightsDoctorMod:strategy": {
+  "ArknightsDoctorMod:ZCStrategy": {
     "NAME": "ZC攻略宝典",
     "FLAVOR": " “哈喽，大家好，这里是ZC。欢迎收看ZC的平民攻略。” ",
     "DESCRIPTIONS": [

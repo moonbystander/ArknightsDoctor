@@ -9,14 +9,16 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
-public class ChooseOperatorsSkillCardsToHandAction extends AbstractGameAction {
+
+//选从给定的卡组中选择一张加入手牌
+public class ChooseCardsToHandAction extends AbstractGameAction {
 
     private final String msg;
     private final boolean skippable;
     private final ArrayList<AbstractCard> options;
     private boolean retrieveCard = false;
 
-    public ChooseOperatorsSkillCardsToHandAction( ArrayList<AbstractCard> options, String msg, boolean skippable) {//朴实无华的赋值
+    public ChooseCardsToHandAction(ArrayList<AbstractCard> options, String msg, boolean skippable) {//朴实无华的赋值
         this.msg = msg;//选择窗口的文本提示
         this.skippable = skippable;//有无跳过选项
         this.options = options;//要进行选择的所有卡牌
