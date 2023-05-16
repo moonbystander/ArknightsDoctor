@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+
+//思考：不同干员的再部署能力之间，区别只有ID和card，能否复用power？
 public class AbstractOperatorRedeploymentPower extends AbstractPower {
     public AbstractOperatorsCard card;
 

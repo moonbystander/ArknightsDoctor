@@ -17,10 +17,10 @@ public class Defend extends CustomCard {
     private static final int COST = 1;
     private static final int BLOCK_AMT = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
-    public static final String ID = "Defend";
+    public static final String ID = DoctorHelper.MakePath("Defend");
 
     public Defend(){
-        super(ID, NAME, DoctorHelper.GetTestImgPath(), COST, DESCRIPTION, CardType.ATTACK, Doctor.Enums.DOCTOR_CARD , CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, NAME, DoctorHelper.GetTestImgPath(), COST, DESCRIPTION, CardType.ATTACK, Doctor.Enums.DOCTOR_CARD , CardRarity.BASIC, CardTarget.SELF);
         this.tags.add(CardTags.STARTER_DEFEND);
         this.baseDamage = BLOCK_AMT;
     }

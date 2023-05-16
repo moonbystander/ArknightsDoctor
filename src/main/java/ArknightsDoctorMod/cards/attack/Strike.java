@@ -20,7 +20,7 @@ public class Strike extends CustomCard {
     private static final int COST = 1;
     private static final int ATTACK_DMG = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
-    public static final String ID = "Strike";
+    public static final String ID = DoctorHelper.MakePath("Strike");
 
 
     public Strike(){

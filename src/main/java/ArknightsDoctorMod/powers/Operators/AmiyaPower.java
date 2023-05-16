@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
-public class AmyPower extends AbstractOperatorRedeploymentPower {
+public class AmiyaPower extends AbstractOperatorRedeploymentPower {
     // 能力的ID
     public static String POWER_ID = DoctorHelper.MakePath("AmyPower");
     // 能力的本地化字段
@@ -20,7 +20,7 @@ public class AmyPower extends AbstractOperatorRedeploymentPower {
     // 能力的描述
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public AmyPower(AbstractCreature owner, int amount, AbstractOperatorsCard card) {
+    public AmiyaPower(AbstractCreature owner, int amount, AbstractOperatorsCard card) {
         super(owner, amount, card);
         this.name = NAME;
         this.type = PowerType.BUFF;
