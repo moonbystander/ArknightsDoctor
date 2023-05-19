@@ -1,9 +1,8 @@
-package ArknightsDoctorMod.powers.Operators;
+package ArknightsDoctorMod.powers.OperatorsPower;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import ArknightsDoctorMod.powers.AbstractOperatorRedeploymentPower;
-import ArknightsDoctorMod.powers.LaevatainPower;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,6 +21,7 @@ public class AmiyaPower extends AbstractOperatorRedeploymentPower {
 
     public AmiyaPower(AbstractCreature owner, int amount, AbstractOperatorsCard card) {
         super(owner, amount, card);
+        this.ID = POWER_ID;
         this.name = NAME;
         this.type = PowerType.BUFF;
         String path128 = DoctorHelper.getResourcePath()+"img/powers/test84.png";
@@ -29,6 +29,12 @@ public class AmiyaPower extends AbstractOperatorRedeploymentPower {
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
         this.updateDescription();
+    }
+
+
+    @Override
+    public void updateDescription() {
+        this.description = this.name+DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1];
     }
 
 

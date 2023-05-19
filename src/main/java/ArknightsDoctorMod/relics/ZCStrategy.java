@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 public class ZCStrategy extends CustomRelic {
 
     public static final String ID = DoctorHelper.MakePath("ZCStrategy");
-    private static final String IMG = DoctorHelper.MakeAssetPath("img/relics/test_png");
+    private static final String IMG = DoctorHelper.MakeAssetPath("img/relics/test.png");
     // 遗物类型
     private static final RelicTier RELIC_TIER = RelicTier.RARE;
     // 点击音效
@@ -22,6 +22,10 @@ public class ZCStrategy extends CustomRelic {
 
     public ZCStrategy() {
         super(ID, ImageMaster.loadImage(IMG), RELIC_TIER, LANDING_SOUND);
+    }
+
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
     }
 
     //使用卡牌触发，抽一回一

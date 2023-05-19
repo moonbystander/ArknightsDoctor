@@ -34,7 +34,7 @@ public class LaevatainPower  extends AbstractPower implements DamageModApplyingP
     public LaevatainPower(AbstractCreature owner){
         this.amount=-1;
         this.name = NAME;
-        this.ID = LaevatainPower.POWER_ID;
+        this.ID = POWER_ID;
         this.owner = owner;
         this.type = PowerType.BUFF;
         String path128 = DoctorHelper.getResourcePath()+"img/powers/test84.png";

@@ -22,7 +22,7 @@ public class Defend extends CustomCard {
     public Defend(){
         super(ID, NAME, DoctorHelper.GetTestImgPath(), COST, DESCRIPTION, CardType.ATTACK, Doctor.Enums.DOCTOR_CARD , CardRarity.BASIC, CardTarget.SELF);
         this.tags.add(CardTags.STARTER_DEFEND);
-        this.baseDamage = BLOCK_AMT;
+        this.baseBlock = BLOCK_AMT;
     }
 
     @Override

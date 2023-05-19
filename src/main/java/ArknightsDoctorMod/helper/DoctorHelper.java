@@ -23,7 +23,7 @@ public class DoctorHelper {
 
 
     public static String GetTestImgPath(){
-        return RESOURCEPATH+"imh/cards/test.png";
+        return RESOURCEPATH+"img/cards/test.png";
     }
 
     public static String GetImgPath(String id, CardType TYPE) {

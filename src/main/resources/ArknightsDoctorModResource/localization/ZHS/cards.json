@@ -18,9 +18,19 @@
   },
   "ArknightsDoctorMod:Amiya": {
     "NAME": "阿米娅",
-    "DESCRIPTION": "干员 罗德岛公开领导人阿米娅，将与你并肩作战。 NL 加油，博士。",
+    "DESCRIPTION": " 干员 罗德岛公开领导人阿米娅，将与你并肩作战。 NL 加油，博士。",
     "OPTIONS": ["ArknightsDoctorMod:SpiritBurst","ArknightsDoctorMod:Chimera"]
   },
+  "ArknightsDoctorMod:SpiritBurst": {
+    "NAME": "精神爆发",
+    "DESCRIPTION": " 消耗 保留 NL 对目标造成 !M! 次 !D! 点伤害"
+  }
+  ,
+  "ArknightsDoctorMod:Chimera": {
+    "NAME": "奇美拉",
+    "DESCRIPTION": " 退场 消耗 保留 NL 对所有敌人造成 !D! 点真实伤害"
+  }
+  ,
   "ArknightsDoctorMod:ViolinSolo": {
     "NAME": "小提琴独奏",
     "DESCRIPTION": "回忆 消耗 NL 获得 !M! 点再生 "

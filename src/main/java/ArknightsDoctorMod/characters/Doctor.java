@@ -2,10 +2,14 @@ package ArknightsDoctorMod.characters;
 
 
 import ArknightsDoctorMod.cards.attack.Strike;
+import ArknightsDoctorMod.cards.operators.Amiya;
+import ArknightsDoctorMod.cards.skill.Defend;
 import ArknightsDoctorMod.helper.DoctorHelper;
 
 
 import ArknightsDoctorMod.modcore.ArknightsDoctorMod;
+import ArknightsDoctorMod.relics.Laevatain;
+import ArknightsDoctorMod.relics.PRTS;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -42,7 +46,7 @@ public class Doctor extends CustomPlayer {
             DoctorHelper.getResourcePath()+"img/UI/orb/layer3.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer2.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer1.png",
-            DoctorHelper.getResourcePath()+"img/UI/orb/layer6.png",
+            DoctorHelper.getResourcePath()+"img/UI/orb/layer0.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer5d.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer4d.png",
             DoctorHelper.getResourcePath()+"img/UI/orb/layer3d.png",
@@ -106,13 +110,24 @@ public class Doctor extends CustomPlayer {
     //初始卡，4打击4防御，1阿米娅1凯尔希
     @Override
     public ArrayList<String> getStartingDeck() {
-        return null;
+        ArrayList<String> retVal = new ArrayList<>();
+        for(int x = 0; x<4; x++) {
+            retVal.add(Strike.ID);
+        }
+        for(int x = 0; x<4; x++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(Amiya.ID);
+        return retVal;
     }
 
     //初始遗物，莱瓦汀、PRTS
     @Override
     public ArrayList<String> getStartingRelics() {
-        return null;
+        ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(PRTS.ID);
+        retVal.add(Laevatain.ID);
+        return retVal;
     }
 
     //
@@ -205,6 +220,9 @@ public class Doctor extends CustomPlayer {
 
         @SpireEnum(name = "ArknightsDoctorMod:OPERATORS")
         public static AbstractCard.CardTags OPERATORS;
+
+        @SpireEnum(name = "ArknightsDoctorMod:OPERATORSKILL")
+        public static AbstractCard.CardTags OPERATORSKILL;
 
         @SpireEnum
         public static PlayerClass DOCTOR_PLAYER;

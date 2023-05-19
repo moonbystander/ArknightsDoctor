@@ -3,6 +3,7 @@ package ArknightsDoctorMod.modcore;
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
+import ArknightsDoctorMod.relics.Laevatain;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
@@ -20,7 +21,8 @@ import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class ArknightsDoctorMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, EditKeywordsSubscriber {
-    private static final String MY_CHARACTER_BUTTON = DoctorHelper.RESOURCEPATH +"img/char/Doctor_Button.png";//√
+//    private static final String MY_CHARACTER_BUTTON = DoctorHelper.RESOURCEPATH +"img/char/img.png";//√
+    private static final String MY_CHARACTER_BUTTON = DoctorHelper.RESOURCEPATH +"img/char/button.png";//√
     private static final String MY_CHARACTER_PORTRAIT = DoctorHelper.RESOURCEPATH+"img/char/Doctor_Portrait.png";//√
 
     //目前使用莉莉丝素材
@@ -28,11 +30,11 @@ public class ArknightsDoctorMod implements EditCardsSubscriber, EditStringsSubsc
     private static final String BG_POWER_512 = DoctorHelper.RESOURCEPATH+"img/512/bg_power_512.png";//√
     private static final String BG_SKILL_512 = DoctorHelper.RESOURCEPATH+"img/512/bg_skill_512.png";//√
     private static final String energy_orb = DoctorHelper.RESOURCEPATH+"img/512/SELESOrb.png";//√
-    private static final String big_orb = "img/1024/SELESOrb.png";//√
-    private static final String BG_ATTACK_1024 = "img/1024/bg_attack_1024.png";//√
-    private static final String BG_POWER_1024 = "img/1024/bg_power_1024.png";//√
-    private static final String BG_SKILL_1024 = "img/1024/bg_skill_1024.png";//√
-    private static final String small_orb = "img/UI/energyOrb.png";//√
+    private static final String big_orb = DoctorHelper.RESOURCEPATH+"img/1024/SELESOrb.png";//√
+    private static final String BG_ATTACK_1024 = DoctorHelper.RESOURCEPATH+"img/1024/bg_attack_1024.png";//√
+    private static final String BG_POWER_1024 = DoctorHelper.RESOURCEPATH+"img/1024/bg_power_1024.png";//√
+    private static final String BG_SKILL_1024 = DoctorHelper.RESOURCEPATH+"img/1024/bg_skill_1024.png";//√
+    private static final String small_orb = DoctorHelper.RESOURCEPATH+"img/UI/energyOrb.png";//√
 
     private static final Color MY_COLOR = new Color(0.0F, 1.0F, 1.0F, 1.0F);
 
@@ -71,7 +73,7 @@ public class ArknightsDoctorMod implements EditCardsSubscriber, EditStringsSubsc
             lang = "ZHS";
         }
 
-        String json = Gdx.files.internal(DoctorHelper.RESOURCEPATH+"localization/+"+ lang+"/keywords.json")
+        String json = Gdx.files.internal(DoctorHelper.RESOURCEPATH+"localization/"+ lang+"/keywords.json")
                 .readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
@@ -86,7 +88,7 @@ public class ArknightsDoctorMod implements EditCardsSubscriber, EditStringsSubsc
     public void receiveEditRelics() {
         //将MyRelic改为自己的遗物
         new AutoAdd("ArknightsDoctorMod")
-                .packageFilter(MyRelic.class)
+                .packageFilter(Laevatain.class)
                 .any(CustomRelic.class, (info, relic) -> {
                     BaseMod.addRelicToCustomPool(relic, Doctor.Enums.DOCTOR_CARD);
                     UnlockTracker.markRelicAsSeen(relic.relicId);

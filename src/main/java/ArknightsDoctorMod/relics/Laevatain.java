@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Laevatain extends CustomRelic implements ClickableRelic {
     public static final String ID = DoctorHelper.MakePath("Laevatain");
-    private static final String IMG = DoctorHelper.MakeAssetPath("img/relics/test_png");
+    private static final String IMG = DoctorHelper.MakeAssetPath("img/relics/test.png");
     // 遗物类型
     private static final RelicTier RELIC_TIER = RelicTier.STARTER;
     // 点击音效
