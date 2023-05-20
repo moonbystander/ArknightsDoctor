@@ -1,13 +1,11 @@
 package ArknightsDoctorMod.cards;
 
-import ArknightsDoctorMod.actions.FindRetreatedCardAction;
-import ArknightsDoctorMod.actions.OperatorSkillCardRetainAction;
+import ArknightsDoctorMod.actions.OperatorsAndSkillActions.FindRetreatedCardAction;
+import ArknightsDoctorMod.actions.OperatorsAndSkillActions.OperatorSkillCardRetainAction;
 import ArknightsDoctorMod.characters.Doctor;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public abstract class AbstractOperatorsSkillCard extends CustomCard {
 

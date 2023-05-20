@@ -2,9 +2,12 @@ package ArknightsDoctorMod.cards.attack;
 
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
+import ArknightsDoctorMod.modifiers.LaevatainDamage;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,7 +21,7 @@ public class Strike extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
+    private static final int ATTACK_DMG = 1;
     private static final int UPGRADE_PLUS_DMG = 3;
     public static final String ID = DoctorHelper.MakePath("Strike");
 

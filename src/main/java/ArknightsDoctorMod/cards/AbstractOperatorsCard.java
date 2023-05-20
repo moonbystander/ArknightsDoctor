@@ -3,10 +3,11 @@ package ArknightsDoctorMod.cards;
 import ArknightsDoctorMod.actions.CardMoveAction;
 import ArknightsDoctorMod.actions.CopyCardsToHandAction;
 import ArknightsDoctorMod.actions.GetTrustAction;
-import ArknightsDoctorMod.actions.RetreatAction;
+import ArknightsDoctorMod.actions.OperatorsAndSkillActions.RetreatAction;
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,7 +19,7 @@ import java.util.Iterator;
 
 
 //思考：若在抽象干员牌中添加成员：抽象再部署能力，子类负责决定抽象再部署能力是什么，然后在onMoveToDiscard方法中将
-public abstract class AbstractOperatorsCard extends CustomCard {
+public abstract class AbstractOperatorsCard extends CustomCard implements SpawnModificationCard {
 
     public static String TESTIMG= DoctorHelper.RESOURCEPATH+"img/cards/test.png";
     public ArrayList<AbstractCard> options=new ArrayList<>();
@@ -108,5 +109,19 @@ public abstract class AbstractOperatorsCard extends CustomCard {
     }
 
 
+    //如果卡组中已经存在，则剔除
 
+
+    @Override
+    public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
+        //Player can't already have the card.
+        //检查卡组中是否有此卡
+        for(AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.cardID.equals(this.cardID)) {
+                return false;
+            }
+        }
+        //Card will spawn.
+        return true;
+    }
 }

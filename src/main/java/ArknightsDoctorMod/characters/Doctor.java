@@ -9,6 +9,7 @@ import ArknightsDoctorMod.helper.DoctorHelper;
 
 import ArknightsDoctorMod.modcore.ArknightsDoctorMod;
 import ArknightsDoctorMod.relics.Laevatain;
+import ArknightsDoctorMod.relics.OperatorRecords;
 import ArknightsDoctorMod.relics.PRTS;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -26,6 +27,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
@@ -70,6 +72,7 @@ public class Doctor extends CustomPlayer {
         if (trust >200){
             trust = 200;
         }
+        updateTrustText();
         return trust;
     }
 
@@ -81,7 +84,15 @@ public class Doctor extends CustomPlayer {
         if (trust < 0 ){
             trust=0;
         }
+        updateTrustText();
         return trust;
+    }
+
+    public void updateTrustText(){
+        if (this.hasRelic(OperatorRecords.ID)){
+            OperatorRecords r= (OperatorRecords) this.getRelic(OperatorRecords.ID);
+            r.setDescriptionAfterLoading();
+        }
     }
 
 

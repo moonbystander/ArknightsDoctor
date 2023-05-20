@@ -1,5 +1,6 @@
-package ArknightsDoctorMod.actions;
+package ArknightsDoctorMod.actions.OperatorsAndSkillActions;
 
+import ArknightsDoctorMod.actions.CardMoveAction;
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
 import ArknightsDoctorMod.characters.Doctor;

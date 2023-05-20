@@ -1,6 +1,7 @@
 package ArknightsDoctorMod.powers;
 
 import ArknightsDoctorMod.helper.DoctorHelper;
+import ArknightsDoctorMod.modifiers.LaevatainDamage;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.DamageModApplyingPower;
@@ -8,6 +9,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnPlayerDeathPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,6 +19,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import java.util.Collections;
 import java.util.List;
 
 public class LaevatainPower  extends AbstractPower implements DamageModApplyingPower  {
@@ -63,15 +66,15 @@ public class LaevatainPower  extends AbstractPower implements DamageModApplyingP
 
     @Override
     public boolean shouldPushMods(DamageInfo damageInfo, Object o, List<AbstractDamageModifier> list) {
-        return true;
+
+        return o instanceof AbstractCard && list.stream().noneMatch(mod -> mod instanceof LaevatainDamage);
     }
 
     //目标：修改伤害对所有怪物生效，伤害增加330%
-    //暂时不知道怎么写。。
     @Override
     public List<AbstractDamageModifier> modsToPush(DamageInfo damageInfo, Object o, List<AbstractDamageModifier> list) {
 
-        return null;
+        return Collections.singletonList(new LaevatainDamage());
     }
 
 }

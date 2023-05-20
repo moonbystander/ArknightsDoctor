@@ -1,4 +1,4 @@
-package ArknightsDoctorMod.actions;
+package ArknightsDoctorMod.actions.OperatorsAndSkillActions;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

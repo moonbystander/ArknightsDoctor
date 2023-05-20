@@ -36,6 +36,6 @@ public class AbstractOperatorRedeploymentPower extends AbstractPower {
     public void onRemove() {
         System.out.println("RedeploymentPower Remove");
         Doctor doctor= (Doctor) AbstractDungeon.player;
-        this.addToBot(new CardMoveAction(card,doctor.OperatorsWaiting,doctor.hand,true));
+        this.addToBot(new CardMoveAction(card,doctor.OperatorsWaiting,doctor.drawPile,true));
     }
 }
