@@ -12,14 +12,22 @@
     "NAME": "开棺 no",
     "DESCRIPTION": "消耗 获得1点能量 。"
   },
-  "ArknightsDoctorMod:2": {
-    "NAME": "红 no",
-    "DESCRIPTION": "干员 NL 造成 !D! 点伤害，并将所有敌人击晕一回合 NL 消耗 。"
+  "ArknightsDoctorMod:WolfPack": {
+    "NAME": "狼群",
+    "DESCRIPTION": "专属 退场 NL 造成 !D! 点伤害，并击晕所有敌人一回合。"
   },
+  "ArknightsDoctorMod:Red": {
+    "NAME": "红",
+    "DESCRIPTION": "罗德岛特种干员、猎狼人红，即将加入狩猎。 NL 利刃，就是锐齿。"
+  },
+  "ArknightsDoctorMod:SilverAsh": {
+    "NAME": "银灰",
+    "DESCRIPTION": "喀兰贸易公司董事长，已与罗德岛签订合约，随时可以介入战场。 NL 别再挣扎了，他提出的条件里真没有陷阱，就算有，你也看不出来。"
+  }
+  ,
   "ArknightsDoctorMod:Amiya": {
     "NAME": "阿米娅",
-    "DESCRIPTION": " 干员 罗德岛公开领导人阿米娅，将与你并肩作战。 NL 加油，博士。",
-    "OPTIONS": ["ArknightsDoctorMod:SpiritBurst","ArknightsDoctorMod:Chimera"]
+    "DESCRIPTION": " 干员 罗德岛公开领导人阿米娅，将与你并肩作战。 NL 加油，博士。"
   },
   "ArknightsDoctorMod:SpiritBurst": {
     "NAME": "精神爆发",
@@ -39,8 +47,17 @@
   "ArknightsDoctorMod:NoTimeResting": {
     "NAME": "还不能休息！",
     "DESCRIPTION": "博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去3点生命，下回合额外获得1能量和 !M! 张牌"
-
   },
+  "ArknightsDoctorMod:RulesofSurvival": {
+    "NAME": "雪境生存法则",
+    "DESCRIPTION": "每回合获得 !B! 点格挡，恢复 !M! 点生命"
+  }
+  ,
+  "ArknightsDoctorMod:Leader": {
+    "NAME": "领袖",
+    "DESCRIPTION": "回合开始时，将再部署大于 !M! 的干员再部署时长减少1"
+  }
+  ,
   "ArknightsDoctorMod:4": {
     "NAME": "我与我最后的赌注 no",
     "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"

@@ -25,9 +25,9 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
     public ArrayList<AbstractCard> options=new ArrayList<>();
     //再部署能力的ID
     public String powerId;
-    public int redeployment=4;
+    public int redeployment=8;
 
-    //默认再部署回合4
+    //默认再部署回合8
     public AbstractOperatorsCard(String id, String name, String img, String rawDescription, CardRarity rarity,String powerId) {
         super(id, name, img, -2, rawDescription, CardType.SKILL , Doctor.Enums.DOCTOR_CARD, rarity, CardTarget.SELF);
         this.setStartOptions();
@@ -51,7 +51,7 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
         this.UseOperatorsCard(abstractPlayer,abstractMonster);
         //如果绑定的技能牌存在，选择一张加入手牌
         if (options.size() > 0 ){
-            this.addToBot(new CopyCardsToHandAction(options,"选择一张技能牌加入手牌",true));
+            this.addToBot(new CopyCardsToHandAction(options,"选择一张专属牌加入手牌",true));
         }
 
 
@@ -99,7 +99,7 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
 
     //退场时需要调用此函数，用于将战斗中所有干员牌相关移除本场战斗
     public void OnRetreat(){
-        this.addToBot(new RetreatAction(AbstractDungeon.player,this,powerId));
+        this.addToBot(new RetreatAction(AbstractDungeon.player,this));
     }
 
     //每次使用干员牌，增加1信赖
@@ -110,8 +110,6 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
 
 
     //如果卡组中已经存在，则剔除
-
-
     @Override
     public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
         //Player can't already have the card.

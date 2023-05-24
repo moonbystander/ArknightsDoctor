@@ -39,7 +39,7 @@ public class CopyCardsToHandAction extends AbstractGameAction {
             if (!this.retrieveCard)//如果还没用选择的卡牌
             {
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {//如果选择的卡牌不为空（也就是说没跳过）
-                    AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeCopy();//获得你选择的卡牌
+                    AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeSameInstanceOf();//获得你选择的卡牌
                     disCard.current_x = -1000.0F * Settings.xScale;
                     //加入手牌
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));

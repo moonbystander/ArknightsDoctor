@@ -8,16 +8,20 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 import java.util.Iterator;
+import java.util.function.Consumer;
 
 
-//找到退场干员牌，然后调用它的OnRetreat函数
-public class FindRetreatedCardAction extends AbstractGameAction {
+//找到符合ID的干员牌，根据Consumer进行对干员牌进行操作
+public class FindOperatorsCardToDoAction extends AbstractGameAction {
+
+    public Consumer<AbstractOperatorsCard> consumer;
 
     public String OperatorId;
 
-    public FindRetreatedCardAction(AbstractCreature target,String OperatorId){
+    public FindOperatorsCardToDoAction(AbstractCreature target, String OperatorId, Consumer<AbstractOperatorsCard> consumer){
         this.target=target;
         this.OperatorId=OperatorId;
+        this.consumer=consumer;
     }
 
 
@@ -30,7 +34,7 @@ public class FindRetreatedCardAction extends AbstractGameAction {
         while (it.hasNext()){
             card= (AbstractCard) it.next();
             if (card.cardID.equals(this.OperatorId)){
-                ((AbstractOperatorsCard)card).OnRetreat();
+                consumer.accept((AbstractOperatorsCard) card);
             }
         }
 
@@ -38,7 +42,7 @@ public class FindRetreatedCardAction extends AbstractGameAction {
         while (it.hasNext()){
             card= (AbstractCard) it.next();
             if (card.cardID.equals(this.OperatorId)){
-                ((AbstractOperatorsCard)card).OnRetreat();
+                consumer.accept((AbstractOperatorsCard) card);
             }
         }
 
@@ -46,7 +50,7 @@ public class FindRetreatedCardAction extends AbstractGameAction {
         while (it.hasNext()){
             card= (AbstractCard) it.next();
             if (card.cardID.equals(this.OperatorId)){
-                ((AbstractOperatorsCard)card).OnRetreat();
+                consumer.accept((AbstractOperatorsCard) card);
             }
         }
 
@@ -54,7 +58,7 @@ public class FindRetreatedCardAction extends AbstractGameAction {
         while (it.hasNext()){
             card= (AbstractCard) it.next();
             if (card.cardID.equals(this.OperatorId)){
-                ((AbstractOperatorsCard)card).OnRetreat();
+                consumer.accept((AbstractOperatorsCard) card);
             }
         }
 

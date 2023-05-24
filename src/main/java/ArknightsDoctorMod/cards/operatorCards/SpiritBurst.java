@@ -1,4 +1,4 @@
-package ArknightsDoctorMod.cards.operatorsSkill;
+package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
 import ArknightsDoctorMod.cards.operators.Amiya;
@@ -6,7 +6,6 @@ import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,7 +22,7 @@ public class SpiritBurst extends AbstractOperatorsSkillCard {
     public static final String ID = DoctorHelper.MakePath("SpiritBurst");
 
     public SpiritBurst(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardTarget.ENEMY, Amiya.ID);
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.ATTACK,CardTarget.ENEMY, Amiya.ID);
         this.baseDamage=2;
         this.baseMagicNumber=this.magicNumber=6;
     }

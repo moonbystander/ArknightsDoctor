@@ -1,4 +1,4 @@
-package ArknightsDoctorMod.cards.operatorsSkill;
+package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
 import ArknightsDoctorMod.cards.operators.Amiya;
@@ -22,7 +22,7 @@ public class Chimera extends AbstractOperatorsSkillCard {
     public static final String ID = DoctorHelper.MakePath("Chimera");
 
     public Chimera(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardTarget.ALL_ENEMY, Amiya.ID);
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.ATTACK,CardTarget.ALL_ENEMY, Amiya.ID);
         this.baseDamage=20;
     }
 

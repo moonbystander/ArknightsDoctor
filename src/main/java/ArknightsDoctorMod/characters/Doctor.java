@@ -91,7 +91,10 @@ public class Doctor extends CustomPlayer {
     public void updateTrustText(){
         if (this.hasRelic(OperatorRecords.ID)){
             OperatorRecords r= (OperatorRecords) this.getRelic(OperatorRecords.ID);
-            r.setDescriptionAfterLoading();
+            r.setDescriptionAfterLoading(this.trust);
+            if (!r.istrust200 && this.trust == 200){
+                r.istrust200=true;
+            }
         }
     }
 
@@ -138,6 +141,7 @@ public class Doctor extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(PRTS.ID);
         retVal.add(Laevatain.ID);
+        retVal.add(OperatorRecords.ID);
         return retVal;
     }
 

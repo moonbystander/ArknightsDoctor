@@ -22,10 +22,10 @@ public class RetreatAction extends AbstractGameAction {
     public String powerId;
 
     //传入干员牌
-    public RetreatAction(AbstractCreature target, AbstractOperatorsCard card,String powerId){
+    public RetreatAction(AbstractCreature target, AbstractOperatorsCard card){
         this.target=target;
         this.card=card;
-        this.powerId=powerId;
+        this.powerId=card.powerId;
     }
 
     @Override

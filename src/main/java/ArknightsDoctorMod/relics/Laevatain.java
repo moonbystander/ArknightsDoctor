@@ -7,6 +7,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.unique.RegenAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -36,8 +37,7 @@ public class Laevatain extends CustomRelic implements ClickableRelic {
     public void onRightClick() {
         if (!AbstractDungeon.player.hasPower(LaevatainPower.POWER_ID)){
             this.addToBot(new AddMaxHpAction(AbstractDungeon.player,500));
-            //偷懒直接用了再生的action，如果使用莱万汀时身上有再生，会导致再生层数-1
-            this.addToBot(new RegenAction(AbstractDungeon.player,AbstractDungeon.player.maxHealth));
+            this.addToBot(new HealAction(AbstractDungeon.player,AbstractDungeon.player,AbstractDungeon.player.maxHealth));
             //添加能力：莱万汀
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new LaevatainPower(AbstractDungeon.player)));
         }

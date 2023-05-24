@@ -1,10 +1,11 @@
 package ArknightsDoctorMod.cards.operators;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
-import ArknightsDoctorMod.cards.operatorsSkill.Chimera;
-import ArknightsDoctorMod.cards.operatorsSkill.SpiritBurst;
+import ArknightsDoctorMod.cards.operatorCards.Chimera;
+import ArknightsDoctorMod.cards.operatorCards.SpiritBurst;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import ArknightsDoctorMod.powers.OperatorsPower.AmiyaPower;
+import ArknightsDoctorMod.relics.OperatorRecords;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,7 +23,7 @@ public class Amiya extends AbstractOperatorsCard {
 
     //初始化
     public Amiya(){
-        super(ID,NAME,AbstractOperatorsCard.TESTIMG,DESCRIPTION,CardRarity.BASIC,AmiyaPower.POWER_ID,4);
+        super(ID,NAME,AbstractOperatorsCard.TESTIMG,DESCRIPTION,CardRarity.SPECIAL,AmiyaPower.POWER_ID,8);
     }
 
     @Override
@@ -34,6 +35,12 @@ public class Amiya extends AbstractOperatorsCard {
     public void setStartOptions() {
         this.addCardToOptions(new SpiritBurst());
         this.addCardToOptions(new Chimera());
+    }
+
+    //当此卡从卡组中移除时，将信赖遗物中的hasAmiya置为false
+    @Override
+    public void onRemoveFromMasterDeck() {
+        OperatorRecords.hasAmiya=false;
     }
 
 }

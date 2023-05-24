@@ -5,6 +5,14 @@
       "莱万汀！一串充满安全感的数字：+330%，+2，+3，+5000，-20%/s"
     ]
   },
+  "ArknightsDoctorMod:OperatorPower": {
+    "NAME": "再部署",
+    "DESCRIPTIONS": [
+      "将在 #b ",
+      "回合后重新加入战场。"
+    ]
+  }
+  ,
   "ArknightsDoctorMod:AmyPower": {
     "NAME": "阿米娅",
     "DESCRIPTIONS": [
@@ -13,10 +21,25 @@
     ]
   }
   ,
-  "RainOriginatedPower": {
-    "NAME": "风雨兴焉",
+  "ArknightsDoctorMod:RedPower": {
+    "NAME": "红",
     "DESCRIPTIONS": [
-      "风雨 "
+      "将在 #b ",
+      "回合后重新加入战场。"
+    ]
+  },
+  "ArknightsDoctorMod:LeaderPower": {
+    "NAME": "领袖",
+    "DESCRIPTIONS":[
+      "回合开始时将再部署层数大于",
+      "的干员再部署层数减一"
+    ]
+  },
+  "ArknightsDoctorMod:RulesofSurvivalPower": {
+    "NAME": "雪境生存法则",
+    "DESCRIPTIONS": [
+      "每回合获得"
     ]
   }
+
 }

@@ -25,14 +25,19 @@ public class LaevatainDamage extends AbstractDamageModifier {
     //问题：群体伤害动作是通过生成多次单体伤害实现的，直接在此函数中生成群体伤害，会导致每个原始单体伤害都会触发一次此动作
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        //目标为player则不生效
+        if (target.isPlayer){
+            return;
+        }
         int d= (int) (info.base*3.3);
         this.addToBot(new DamageAllEnemiesAction((AbstractPlayer) info.owner,d, info.type, AbstractGameAction.AttackEffect.NONE));
     }
 
     //攻击时，改变原始伤害信息，返回值为原始伤害信息最终造成的伤害
     //使原伤害无效
+    //目标被人物的伤害不修改
     public int onAttackToChangeDamage(DamageInfo info, int damageAmount, AbstractCreature target) {
-        return 0;
+        return target.isPlayer?damageAmount:0;
     }
 
     @Override

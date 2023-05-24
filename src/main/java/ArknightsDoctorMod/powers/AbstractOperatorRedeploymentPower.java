@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 
 //思考：不同干员的再部署能力之间，区别只有ID和card，能否复用power？
-public class AbstractOperatorRedeploymentPower extends AbstractPower {
+public abstract class AbstractOperatorRedeploymentPower extends AbstractPower {
     public AbstractOperatorsCard card;
 
     public AbstractOperatorRedeploymentPower(AbstractCreature owner , int amount , AbstractOperatorsCard card){
@@ -24,6 +24,8 @@ public class AbstractOperatorRedeploymentPower extends AbstractPower {
         this.card=card;
         this.type = PowerType.BUFF;
     }
+
+
 
     //回合结束时，减少一层
     @Override
