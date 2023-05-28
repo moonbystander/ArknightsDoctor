@@ -7,14 +7,14 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public abstract class AbstractOperatorsSkillCard extends CustomCard {
+public abstract class AbstractOperatorsExclusiveCard extends CustomCard {
 
     //所属干员牌的ID
     public String OperatorsCardId;
 
 
     //自带效果：消耗、保留，每保留一回合能耗减一
-    public AbstractOperatorsSkillCard(String id, String name, String img, int cost, String rawDescription,CardType type ,CardTarget target,String OperatorsCardId) {
+    public AbstractOperatorsExclusiveCard(String id, String name, String img, int cost, String rawDescription, CardType type , CardTarget target, String OperatorsCardId) {
         super(id, name, img, cost, rawDescription, type, Doctor.Enums.DOCTOR_CARD, CardRarity.SPECIAL, target);
         this.tags.add(Doctor.Enums.OPERATORSKILL);
         this.OperatorsCardId=OperatorsCardId;
@@ -36,6 +36,7 @@ public abstract class AbstractOperatorsSkillCard extends CustomCard {
     }
 
 
+    //每场战斗只能打出一次的卡牌需要调用此函数
     //预期效果：本场战斗内，此卡从对应干员牌的选项中不再出现，主要针对专属能力牌,需要在能力牌的use中调用 未测试
     //需要测试：是否能在本场战斗中移除、是否会影响下次战斗
     public void cardRemoveToOptions(AbstractPlayer abstractPlayer){

@@ -2,6 +2,7 @@ package ArknightsDoctorMod.cards.operators;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.cards.operatorCards.Leader;
+import ArknightsDoctorMod.cards.operatorCards.RulesofSurvival;
 import ArknightsDoctorMod.cards.operatorCards.WolfPack;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import ArknightsDoctorMod.powers.OperatorsPower.AmiyaPower;
@@ -18,7 +19,8 @@ public class SilverAsh extends AbstractOperatorsCard {
     public static final String ID = DoctorHelper.MakePath("SilverAsh");
 
     public SilverAsh(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),DESCRIPTION,CardRarity.UNCOMMON,DoctorHelper.MakePath("SilverAsh"));
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),DESCRIPTION,CardRarity.UNCOMMON,DoctorHelper.MakePath(
+                "SilverAshPower"));
     }
 
     @Override
@@ -29,5 +31,6 @@ public class SilverAsh extends AbstractOperatorsCard {
     @Override
     public void setStartOptions() {
         this.addCardToOptions(new Leader());
+        this.addCardToOptions(new RulesofSurvival());
     }
 }

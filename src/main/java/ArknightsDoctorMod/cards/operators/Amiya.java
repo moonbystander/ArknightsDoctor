@@ -23,7 +23,7 @@ public class Amiya extends AbstractOperatorsCard {
 
     //初始化
     public Amiya(){
-        super(ID,NAME,AbstractOperatorsCard.TESTIMG,DESCRIPTION,CardRarity.SPECIAL,AmiyaPower.POWER_ID,8);
+        super(ID,NAME,AbstractOperatorsCard.TESTIMG,DESCRIPTION,CardRarity.BASIC,AmiyaPower.POWER_ID);
     }
 
     @Override

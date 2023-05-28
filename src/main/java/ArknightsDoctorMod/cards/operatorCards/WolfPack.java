@@ -1,6 +1,6 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
-import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
+import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
 import ArknightsDoctorMod.cards.operators.Red;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 //狼群，击晕所有怪物
-public class WolfPack extends AbstractOperatorsSkillCard {
+public class WolfPack extends AbstractOperatorsExclusiveCard {
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath("WolfPack"));
     public static final String NAME = cardStrings.NAME;
@@ -36,7 +36,7 @@ public class WolfPack extends AbstractOperatorsSkillCard {
         if (!this.upgraded){
             this.upgradeName();
             this.upgradeDamage(4);
-            this.updateCost(1);
+            this.upgradeBaseCost(0);
         }
     }
 

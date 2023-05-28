@@ -38,12 +38,13 @@ public class LeaderPower extends AbstractPower {
         this.description = DESCRIPTIONS[0]+this.reduce+DESCRIPTIONS[1];
     }
 
+    //回合开始时将再部署时长不小于reduce的减少1
     @Override
     public void atStartOfTurn() {
         Iterator it=owner.powers.iterator();
         while (it.hasNext()){
             AbstractPower p = (AbstractPower) it.next();
-            if (p instanceof AbstractOperatorRedeploymentPower && p.amount > reduce ){
+            if (p instanceof AbstractOperatorRedeploymentPower && p.amount >= reduce ){
                 p.atEndOfTurn(true);
             }
         }

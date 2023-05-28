@@ -138,7 +138,8 @@ public class OperatorRecords extends CustomRelic implements OnPlayerDeathRelic {
     public int onAttackToChangeDamage(DamageInfo info, int damageAmount, AbstractCreature target) {
         int d=damageAmount;
         if (info.owner.isPlayer && !target.isPlayer && ((Doctor)info.owner).trust > 100){
-            d=d+(((Doctor)info.owner).trust-100)/10;
+            int result=(int) Math.floor(((((Doctor)info.owner).trust-100)*(((Doctor)info.owner).trust-100))/1000);
+            d=d+result;
         }
         return d;
     }
@@ -148,12 +149,13 @@ public class OperatorRecords extends CustomRelic implements OnPlayerDeathRelic {
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         int d=damageAmount;
         if (!info.owner.isPlayer && ((Doctor)info.owner).trust > 100){
-            d=d-(((Doctor)info.owner).trust-100)/10;
+            int result=(int) Math.floor(((((Doctor)info.owner).trust-100)*(((Doctor)info.owner).trust-100))/1000);
+            d=d-result;
         }
         return d;
     }
 
-    //胜利时获得3信赖
+    //胜利时获得5信赖
     @Override
     public void onVictory() {
         this.flash();

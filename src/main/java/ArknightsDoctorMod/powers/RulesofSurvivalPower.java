@@ -1,6 +1,8 @@
 package ArknightsDoctorMod.powers;
 
 import ArknightsDoctorMod.helper.DoctorHelper;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -33,5 +35,9 @@ public class RulesofSurvivalPower extends AbstractPower {
     }
 
 
-
+    @Override
+    public void atStartOfTurn() {
+        this.addToBot(new GainBlockAction(owner,owner,block));
+        this.addToBot(new HealAction(owner,owner,heal));
+    }
 }

@@ -1,6 +1,6 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
-import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
+import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
 import ArknightsDoctorMod.cards.operators.Amiya;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -13,12 +13,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SpiritBurst extends AbstractOperatorsSkillCard {
+public class SpiritBurst extends AbstractOperatorsExclusiveCard {
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath("SpiritBurst"));
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 1;
+    private static final int COST = 3;
     public static final String ID = DoctorHelper.MakePath("SpiritBurst");
 
     public SpiritBurst(){

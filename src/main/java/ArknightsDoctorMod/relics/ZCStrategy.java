@@ -31,6 +31,7 @@ public class ZCStrategy extends CustomRelic {
     //使用卡牌触发，抽一回一
     public void onUseCard(final AbstractCard targetCard, final UseCardAction useCardAction) {
         if (count <2 ){
+            this.flash();
             count++;
             this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
             this.addToBot(new GainEnergyAction(1));

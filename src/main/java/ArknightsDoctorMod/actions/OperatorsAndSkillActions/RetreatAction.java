@@ -2,10 +2,9 @@ package ArknightsDoctorMod.actions.OperatorsAndSkillActions;
 
 import ArknightsDoctorMod.actions.CardMoveAction;
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
-import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
+import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
 import ArknightsDoctorMod.characters.Doctor;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.ExhumeAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -50,9 +49,9 @@ public class RetreatAction extends AbstractGameAction {
         while (it.hasNext()){
             c= (AbstractCard) it.next();
             //如果类型是专属牌
-            if (c instanceof AbstractOperatorsSkillCard ){
+            if (c instanceof AbstractOperatorsExclusiveCard){
                 //若专属牌的干员名是此干员牌，则丢入消耗堆
-                if (((AbstractOperatorsSkillCard)c).OperatorsCardId.equals(card.cardID)){
+                if (((AbstractOperatorsExclusiveCard)c).OperatorsCardId.equals(card.cardID)){
                     if (((Doctor) this.target).cardInUse != this.card ){
                         deletelist.add(c);
                     }
@@ -70,9 +69,9 @@ public class RetreatAction extends AbstractGameAction {
         while (it.hasNext()){
             c= (AbstractCard) it.next();
             //如果类型是专属牌
-            if (c instanceof AbstractOperatorsSkillCard ){
+            if (c instanceof AbstractOperatorsExclusiveCard){
                 //若专属牌的干员名是此干员牌，则丢入消耗堆
-                if (((AbstractOperatorsSkillCard)c).OperatorsCardId.equals(card.cardID)){
+                if (((AbstractOperatorsExclusiveCard)c).OperatorsCardId.equals(card.cardID)){
                     if (((Doctor) this.target).cardInUse != c){
                         deletelist.add(c);
                     }
@@ -90,9 +89,9 @@ public class RetreatAction extends AbstractGameAction {
         while (it.hasNext()){
             c= (AbstractCard) it.next();
             //如果类型是专属牌
-            if (c instanceof AbstractOperatorsSkillCard ){
+            if (c instanceof AbstractOperatorsExclusiveCard){
                 //若专属牌的干员名是此干员牌，则丢入消耗堆
-                if (((AbstractOperatorsSkillCard)c).OperatorsCardId.equals(card.cardID)){
+                if (((AbstractOperatorsExclusiveCard)c).OperatorsCardId.equals(card.cardID)){
                     if (((Doctor) this.target).cardInUse != c){
                         deletelist.add(c);
                     }

@@ -1,10 +1,9 @@
 package ArknightsDoctorMod.actions.OperatorsAndSkillActions;
 
-import ArknightsDoctorMod.cards.AbstractOperatorsSkillCard;
+import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 
 
@@ -15,7 +14,7 @@ public class OperatorSkillCardRetainAction extends AbstractGameAction {
     private CardGroup group;
     private float startingDuration;
 
-    public OperatorSkillCardRetainAction(AbstractOperatorsSkillCard card, CardGroup group){
+    public OperatorSkillCardRetainAction(AbstractOperatorsExclusiveCard card, CardGroup group){
         this.targetCard=card;
         this.group=group;
         this.startingDuration = Settings.ACTION_DUR_FAST;

@@ -41,12 +41,12 @@
   ,
   "ArknightsDoctorMod:ViolinSolo": {
     "NAME": "小提琴独奏",
-    "DESCRIPTION": "回忆 消耗 NL 获得 !M! 点再生 "
+    "DESCRIPTION": "信赖 NL获得 !B! 点格挡并恢复 !M! 点生命 "
   }
   ,
   "ArknightsDoctorMod:NoTimeResting": {
     "NAME": "还不能休息！",
-    "DESCRIPTION": "博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去3点生命，下回合额外获得1能量和 !M! 张牌"
+    "DESCRIPTION": "信赖 NL 博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去3点生命，下回合额外获得1能量和 !M! 张牌"
   },
   "ArknightsDoctorMod:RulesofSurvival": {
     "NAME": "雪境生存法则",
@@ -58,28 +58,38 @@
     "DESCRIPTION": "回合开始时，将再部署大于 !M! 的干员再部署时长减少1"
   }
   ,
-  "ArknightsDoctorMod:4": {
-    "NAME": "我与我最后的赌注 no",
-    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  "ArknightsDoctorMod:Pignus": {
+    "NAME": "我与最后的赌注 no",
+    "DESCRIPTION": "生命减少到1，回合结束时获得一个额外回合。"
   },
   "ArknightsDoctorMod:Kaltsit": {
     "NAME": "凯尔希",
     "DESCRIPTION": "干员 罗德岛医疗部门负责人，凯尔希。 NL 她来自过去。她属于现在。",
-    "OPTIONS": ["ArknightsDoctorMod:Command:StructuralFortification","ArknightsDoctorMod:Command:TacticalCoordination","ArknightsDoctorMod:Command:Meltdown"]
+    "OPTIONS": ["ArknightsDoctorMod:Command:Meltdown"]
   },
-  "ArknightsDoctorMod:Command:StructuralFortification":{
+  "ArknightsDoctorMod:Command_TacticalCoordination": {
+    "NAME": "指令：战术协同",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害"
+  },
+  "ArknightsDoctorMod:Command_StructuralFortification":{
     "NAME": "指令：结构加固",
-    "DESCRIPTION": "获得 !M! 点敏捷并获得 !B! 点格挡"
+    "DESCRIPTION": "获得1点金属化,获得X次 !B! 点格挡",
+    "UPGRADE_DESCRIPTION": "获得1点金属化,获得X+1次 !B! 点格挡"
   }
   ,
   "ArknightsDoctorMod:Saria": {
-    "NAME": "赛雷娅",
+    "NAME": "赛雷娅 no",
     "DESCRIPTION": "干员 NL 获得 !M! 层缓冲 NL 消耗 。"
   },
-  "ArknightsDoctorMod:7": {
-    "NAME": "开棺",
-    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
+  "ArknightsDoctorMod:Tactics_Retreat": {
+    "NAME": "战术：撤退",
+    "DESCRIPTION": "获得5信赖 NL 选择一名正在等待再部署的干员，使其 #y退场 "
   },
+  "ArknightsDoctorMod:Tactics_Command": {
+    "NAME": "战术：指挥",
+    "DESCRIPTION": "获得5信赖 NL 本回合打出的下一张干员专属牌耗能为0"
+  }
+  ,
   "ArknightsDoctorMod:8": {
     "NAME": "开棺",
     "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
@@ -92,13 +102,60 @@
   "NAME": "祝你们前路无阻",
   "DESCRIPTION": "移除 ，使用后获得 壁垒 和50点格挡"
   },
-  "ArknightsDoctorMod:red": {
+  "ArknightsDoctorMod:redOnWall": {
     "NAME": "墙上的小红帽",
-    "DESCRIPTION": "下次受到伤害时，闪避伤害并对敌人造成7点伤害"
+    "DESCRIPTION": "获得 !B! 点格挡，并对敌人造成 !D! 点伤害"
   },
-  "ArknightsDoctorMod:Ceobe": {
-    "NAME": "刻俄柏",
-    "DESCRIPTION": "干员 刻俄柏，随时准备打坏人。NL 能敲一个两个三个，又快又准。",
-    "OPTIONS": ["ArknightsDoctorMod:ReallyColdAxe","ArknightsDoctorMod:ReallyHotKnives","ArknightsDoctorMod:ReallyHeavySpear"]
+  "战地秘闻": {
+    "NAME": "战地秘闻",
+    "DESCRIPTION": "战地秘闻"
+  },
+  "洪炉示岁": {
+    "NAME": "洪炉示岁",
+    "DESCRIPTION": "洪炉示岁"
+  },
+  "午间逸话": {
+    "NAME": "午间逸话",
+    "DESCRIPTION": "午间逸话"
+  },
+  "乌萨斯的孩子们": {
+    "NAME": "乌萨斯的孩子们",
+    "DESCRIPTION": "乌萨斯的孩子们"
+  },
+  "踏寻往昔之风":{
+    "NAME": "踏寻往昔之风",
+    "DESCRIPTION": "踏寻往昔之风"
+  },
+  "此地之外": {
+    "NAME": "此地之外",
+    "DESCRIPTION": "此地之外"
+  },
+  "灯火序曲": {
+    "NAME": "灯火序曲",
+    "DESCRIPTION": "灯火序曲"
+  },
+  "红松林": {
+    "NAME": "红松林",
+    "DESCRIPTION": "红松林"
+  },
+  "阴云火花": {
+    "NAME": "阴云火花",
+    "DESCRIPTION": "阴云火花"
+  },
+  "未尽篇章": {
+    "NAME": "未尽篇章",
+    "DESCRIPTION": "未尽篇章"
+  },
+  "日暮寻路": {
+    "NAME": "日暮寻路",
+    "DESCRIPTION": "日暮寻路"
+  },
+  "春分": {
+    "NAME": "春分",
+    "DESCRIPTION": "春分"
+  },
+  "骑兵与猎人": {
+    "NAME": "骑兵与猎人",
+    "DESCRIPTON": "骑兵与猎人"
   }
 }

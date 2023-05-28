@@ -6,8 +6,10 @@ import ArknightsDoctorMod.actions.GetTrustAction;
 import ArknightsDoctorMod.actions.OperatorsAndSkillActions.RetreatAction;
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
+import ArknightsDoctorMod.powers.OperatorsPower.OperatorRedeploymentPower;
 import basemod.abstracts.CustomCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -25,9 +27,9 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
     public ArrayList<AbstractCard> options=new ArrayList<>();
     //再部署能力的ID
     public String powerId;
-    public int redeployment=8;
+    public int redeployment=7;
 
-    //默认再部署回合8
+    //默认再部署回合7
     public AbstractOperatorsCard(String id, String name, String img, String rawDescription, CardRarity rarity,String powerId) {
         super(id, name, img, -2, rawDescription, CardType.SKILL , Doctor.Enums.DOCTOR_CARD, rarity, CardTarget.SELF);
         this.setStartOptions();
@@ -78,7 +80,9 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
     }
 
     //抽象方法，添加再部署power，需要子类进行实现,在父类中调用
-    public abstract void addRedeploymentPowerAction(AbstractCreature owner);
+    public  void addRedeploymentPowerAction(AbstractCreature owner){
+        this.addToBot(new ApplyPowerAction(owner,owner,new OperatorRedeploymentPower(owner,this.redeployment,this),this.redeployment));
+    };
 
     //向列表中添加一张牌
     public void addCardToOptions(AbstractCard c){
@@ -109,7 +113,7 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
     }
 
 
-    //如果卡组中已经存在，则剔除
+    //如果卡组中已经存在，则剔除。确保每个干员牌只能在卡组中存在一张
     @Override
     public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
         //Player can't already have the card.

@@ -29,7 +29,7 @@ public class LaevatainDamage extends AbstractDamageModifier {
         if (target.isPlayer){
             return;
         }
-        int d= (int) (info.base*3.3);
+        int d= (int)Math.floor (info.base*3.3);
         this.addToBot(new DamageAllEnemiesAction((AbstractPlayer) info.owner,d, info.type, AbstractGameAction.AttackEffect.NONE));
     }
 
