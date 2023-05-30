@@ -2,7 +2,7 @@ package ArknightsDoctorMod.characters;
 
 
 import ArknightsDoctorMod.cards.attack.Strike;
-import ArknightsDoctorMod.cards.operators.Amiya;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Amiya;
 import ArknightsDoctorMod.cards.skill.Defend;
 import ArknightsDoctorMod.helper.DoctorHelper;
 
@@ -27,7 +27,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
@@ -115,7 +114,7 @@ public class Doctor extends CustomPlayer {
                 this.getLoadout(),
                 0.0F, 0.0F,
                 200.0F, 220.0F, // 人物碰撞箱大小，越大的人物模型这个越大
-                new EnergyManager(3) // 初始每回合的能量
+                new EnergyManager(2) // 初始每回合的能量
         );
 
     }

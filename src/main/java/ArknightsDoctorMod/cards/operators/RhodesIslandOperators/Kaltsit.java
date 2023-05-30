@@ -1,8 +1,9 @@
-package ArknightsDoctorMod.cards.operators;
+package ArknightsDoctorMod.cards.operators.RhodesIslandOperators;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.cards.operatorCards.Command_StructuralFortification;
 import ArknightsDoctorMod.cards.operatorCards.Command_TacticalCoordination;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperator;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Kaltsit extends AbstractOperatorsCard {
+public class Kaltsit extends RhodesIslandOperator {
 
     public static final String ID = DoctorHelper.MakePath("Kaltsit");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath(ID));

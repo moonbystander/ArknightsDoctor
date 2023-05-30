@@ -36,7 +36,7 @@ public class NoTimeResting extends AbstractMemoryCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         super.use(abstractPlayer, abstractMonster);
-        this.addToBot(new DamageAction(abstractPlayer,new DamageInfo(abstractPlayer,5, DamageInfo.DamageType.HP_LOSS)));
+        this.addToBot(new DamageAction(abstractPlayer,new DamageInfo(abstractPlayer,2, DamageInfo.DamageType.HP_LOSS)));
         this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new DrawCardNextTurnPower(abstractPlayer,this.baseMagicNumber)));
         this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new EnergizedPower(abstractPlayer,this.baseMagicNumber)));
     }

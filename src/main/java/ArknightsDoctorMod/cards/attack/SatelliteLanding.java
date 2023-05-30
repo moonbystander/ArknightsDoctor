@@ -1,8 +1,8 @@
-package ArknightsDoctorMod.cards.operatorCards;
+package ArknightsDoctorMod.cards.attack;
 
-import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
-import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Kaltsit;
+import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,25 +11,28 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Command_TacticalCoordination extends AbstractOperatorsExclusiveCard {
+public class SatelliteLanding extends CustomCard {
 
-    public static final String ID = DoctorHelper.MakePath("Command_TacticalCoordination");
-    private static final CardStrings cardStrings= CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME=cardStrings.NAME;
+    public static final String ID = DoctorHelper.MakePath("SatelliteLanding");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static int COST = 3;
+    private static final int COST = 2;
 
-    public Command_TacticalCoordination(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.ATTACK,CardTarget.ALL_ENEMY, Kaltsit.ID);
-        this.baseDamage=6;
-        this.isMultiDamage=true;
+
+    public SatelliteLanding(){
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.ATTACK, Doctor.Enums.DOCTOR_CARD,
+                CardRarity.UNCOMMON,CardTarget.ALL_ENEMY);
+        this.baseDamage=23;
+        this.isMultiDamage = true;
+        this.exhaust = true;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded){
             this.upgradeName();
-            this.upgradeDamage(4);
+            this.upgradeDamage(5);
         }
     }
 

@@ -1,20 +1,14 @@
 package ArknightsDoctorMod.relics;
 
-import ArknightsDoctorMod.actions.AddMaxHpAction;
 import ArknightsDoctorMod.actions.GetTrustAction;
-import ArknightsDoctorMod.actions.OperatorsAndSkillActions.RetreatAction;
 import ArknightsDoctorMod.actions.RemoveCardFromDeckAction;
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
-import ArknightsDoctorMod.cards.operators.Amiya;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Amiya;
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
-import ArknightsDoctorMod.powers.LaevatainPower;
 import basemod.abstracts.CustomRelic;
-import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnPlayerDeathRelic;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.unique.RegenAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;

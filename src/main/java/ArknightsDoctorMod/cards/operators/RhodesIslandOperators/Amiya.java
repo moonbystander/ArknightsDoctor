@@ -1,19 +1,20 @@
-package ArknightsDoctorMod.cards.operators;
+package ArknightsDoctorMod.cards.operators.RhodesIslandOperators;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.cards.operatorCards.Chimera;
 import ArknightsDoctorMod.cards.operatorCards.SpiritBurst;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperator;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import ArknightsDoctorMod.powers.OperatorsPower.AmiyaPower;
-import ArknightsDoctorMod.relics.OperatorRecords;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import ArknightsDoctorMod.relics.OperatorRecords;
 
 
 //绑定专属技能牌
-public class Amiya extends AbstractOperatorsCard {
+public class Amiya extends RhodesIslandOperator {
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath("Amiya"));
     public static final String NAME = cardStrings.NAME;

@@ -1,46 +1,37 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
-import ArknightsDoctorMod.cards.operators.SilverAsh;
 import ArknightsDoctorMod.helper.DoctorHelper;
-import ArknightsDoctorMod.powers.RulesofSurvivalPower;
+import ArknightsDoctorMod.powers.Targeting_PrimaryPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RulesofSurvival extends AbstractOperatorsExclusiveCard {
-
-    private static final CardStrings cardStrings= CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath("RulesofSurvival"));
+public class Targeting_Primary extends AbstractOperatorsExclusiveCard {
+    public static final String ID = DoctorHelper.MakePath("Targeting_Primary");
+    private static final CardStrings cardStrings= CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME=cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static int COST = 3;
-    public static final String ID = DoctorHelper.MakePath("RulesofSurvival");
 
 
-
-    public RulesofSurvival(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.POWER,CardTarget.SELF, SilverAsh.ID);
-        this.baseBlock=4;
-        this.baseMagicNumber=3;
+    public Targeting_Primary(String operatorID){
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.POWER,CardTarget.SELF,operatorID);
     }
-
 
     @Override
     public void upgrade() {
         if (!this.upgraded){
             this.upgradeName();
-            this.upgradeBlock(3);
-            this.upgradeMagicNumber(3);
             this.upgradeBaseCost(2);
         }
     }
 
-    //每回合获得格挡，并恢复生命
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new RulesofSurvivalPower(abstractPlayer,this.baseBlock,this.baseMagicNumber)));
+        this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,new Targeting_PrimaryPower(abstractPlayer)));
         super.cardRemoveToOptions(abstractPlayer);
     }
 }

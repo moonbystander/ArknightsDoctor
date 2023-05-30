@@ -1,7 +1,7 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
-import ArknightsDoctorMod.cards.operators.Red;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Red;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

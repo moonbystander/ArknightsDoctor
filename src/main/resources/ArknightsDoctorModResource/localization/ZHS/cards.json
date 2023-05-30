@@ -29,6 +29,21 @@
     "NAME": "阿米娅",
     "DESCRIPTION": " 干员 罗德岛公开领导人阿米娅，将与你并肩作战。 NL 加油，博士。"
   },
+  "ArknightsDoctorMod:Beagle": {
+    "NAME": "米格鲁",
+    "DESCRIPTION": "罗德岛重装干员米格鲁，将为队友提供坚实的防御力量。 NL 可以多对她说些鼓励的话。"
+  }
+  ,
+  "ArknightsDoctorMod:DEFUpα": {
+    "NAME": "防御力强化·α型",
+    "DESCRIPTION": "获得 !B! 格挡"
+  }
+  ,
+  "ArknightsDoctorMod:DEFUp": {
+    "NAME": "防御提升",
+    "DESCRIPTION": "获得 !M! 敏捷"
+  }
+  ,
   "ArknightsDoctorMod:SpiritBurst": {
     "NAME": "精神爆发",
     "DESCRIPTION": " 专属 NL 对目标造成 !M! 次 !D! 点伤害"
@@ -39,6 +54,18 @@
     "DESCRIPTION": "专属 NL 对所有敌人造成 !D! 点真实伤害"
   }
   ,
+  "ArknightsDoctorMod:Kroos": {
+    "NAME": "克洛丝",
+    "DESCRIPTION": "罗德岛狙击干员克洛丝，将以弓弩挫败敌人的攻击。 NL 一直在瞄准。"
+  },
+  "ArknightsDoctorMod:Double_Tap_Auto": {
+    "NAME": "二连射·自动",
+    "DESCRIPTION": "造成两次 !D! 点伤害"
+  },
+  "ArknightsDoctorMod:Targeting_Primary": {
+    "NAME": "要害瞄准",
+    "DESCRIPTION": "攻击时，20%几率当次攻击的攻击力提升至150%"
+  },
   "ArknightsDoctorMod:ViolinSolo": {
     "NAME": "小提琴独奏",
     "DESCRIPTION": "信赖 NL获得 !B! 点格挡并恢复 !M! 点生命 "
@@ -106,6 +133,11 @@
     "NAME": "墙上的小红帽",
     "DESCRIPTION": "获得 !B! 点格挡，并对敌人造成 !D! 点伤害"
   },
+  "ArknightsDoctorMod:SatelliteLanding": {
+    "NAME": "卫星落地",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+  }
+  ,
   "战地秘闻": {
     "NAME": "战地秘闻",
     "DESCRIPTION": "战地秘闻"

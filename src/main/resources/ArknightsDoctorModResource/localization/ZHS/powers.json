@@ -38,13 +38,27 @@
   "ArknightsDoctorMod:RulesofSurvivalPower": {
     "NAME": "雪境生存法则",
     "DESCRIPTIONS": [
-      "每回合获得"
+      "每回合获得",
+      "格挡和",
+      "生命"
     ]
   },
   "ArknightsDoctorMod:FreeExclusivePower": {
     "NAME": "战术：命令",
     "DESCRIPTIONS": [
       "本回合打出的下一张干员专属牌耗能为0"
+    ]
+  },
+  "ArknightsDoctorMod:RepeatedlyPlayedPower": {
+    "NAME": "罗德岛战术",
+    "DESCRIPTIONS": [
+      "连续打出罗德岛干员牌可获得额外信赖值，使用干员专属牌不会打断该效果"
+    ]
+  },
+  "ArknightsDoctorMod:Targeting_PrimaryPower": {
+    "NAME": "要害瞄准·初级",
+    "DESCRIPTIONS":[
+      "攻击时，20%几率当次攻击的攻击力提升至150%"
     ]
   }
 

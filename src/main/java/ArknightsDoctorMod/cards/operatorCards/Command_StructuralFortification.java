@@ -1,8 +1,9 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
-import ArknightsDoctorMod.cards.operators.Kaltsit;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Kaltsit;
 import ArknightsDoctorMod.helper.DoctorHelper;
+import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,6 +25,7 @@ public class Command_StructuralFortification extends AbstractOperatorsExclusiveC
         super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.SKILL,CardTarget.SELF, Kaltsit.ID);
         this.baseBlock=4;
         this.baseMagicNumber=this.magicNumber=1;
+        AbstractCardModifier
     }
 
     @Override

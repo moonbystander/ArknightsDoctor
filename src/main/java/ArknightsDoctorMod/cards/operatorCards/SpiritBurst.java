@@ -1,7 +1,7 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
-import ArknightsDoctorMod.cards.operators.Amiya;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Amiya;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
