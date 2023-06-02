@@ -60,6 +60,13 @@
     "DESCRIPTIONS":[
       "攻击时，20%几率当次攻击的攻击力提升至150%"
     ]
+  },
+  "ArknigthsDoctorMod:InfusedOriginiumSlugPower": {
+    "NAME": "高爆源石虫",
+    "DESCRIPTIONS": [
+      "当格挡被击破时，对所有敌人造成",
+      "点伤害"
+    ]
   }
 
 }

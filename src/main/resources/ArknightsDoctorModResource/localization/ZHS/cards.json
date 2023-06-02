@@ -54,6 +54,26 @@
     "DESCRIPTION": "专属 NL 对所有敌人造成 !D! 点真实伤害"
   }
   ,
+  "ArknightsDoctorMod:Fang": {
+    "NAME": "芬",
+    "DESCRIPTION": "罗德岛先锋干员芬，将在战场上为小队赢得可观的优势。 NL 她跑得可真快。"
+  },
+  "ArknightsDoctorMod:Chargeα": {
+    "NAME": "冲锋号令·α型",
+    "DESCRIPTION": "获得1点能量"
+  },
+  "ArknightsDoctorMod:Myrtle": {
+    "NAME": "桃金娘",
+    "DESCRIPTION": "罗德岛先锋干员桃金娘，将会带领其他干员冲锋陷阵！ NL 或许可以让她和凛冬交流一下。"
+  },
+  "ArknightsDoctorMod:Supportβ": {
+    "NAME": "支援号令·β型",
+    "DESCRIPTION": "接下来 !M! 回合，每回合获得2能量"
+  },
+  "ArknightsDoctorMod:HealingWings": {
+    "NAME": "治愈之翼",
+    "DESCRIPTION": "接下来五回合，每回合获得1能量和 !M! 点治疗"
+  },
   "ArknightsDoctorMod:Kroos": {
     "NAME": "克洛丝",
     "DESCRIPTION": "罗德岛狙击干员克洛丝，将以弓弩挫败敌人的攻击。 NL 一直在瞄准。"
@@ -73,7 +93,7 @@
   ,
   "ArknightsDoctorMod:NoTimeResting": {
     "NAME": "还不能休息！",
-    "DESCRIPTION": "信赖 NL 博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去3点生命，下回合额外获得1能量和 !M! 张牌"
+    "DESCRIPTION": "信赖 NL 博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去2点生命，下回合额外获得1能量和 !M! 张牌"
   },
   "ArknightsDoctorMod:RulesofSurvival": {
     "NAME": "雪境生存法则",
@@ -138,6 +158,10 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   }
   ,
+  "ArknightsDoctorMod:InfusedOriginiumSlug": {
+    "NAME": "高爆源石虫",
+    "DESCRIPTION": "词条5 ，获得5格挡，当格挡被击破时，对所有敌人造成5伤害"
+  },
   "战地秘闻": {
     "NAME": "战地秘闻",
     "DESCRIPTION": "战地秘闻"
