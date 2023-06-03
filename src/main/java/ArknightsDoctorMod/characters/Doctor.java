@@ -2,7 +2,11 @@ package ArknightsDoctorMod.characters;
 
 
 import ArknightsDoctorMod.cards.attack.Strike;
+import ArknightsDoctorMod.cards.contractCards.InfusedOriginiumSlug;
 import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Amiya;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Kroos;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Myrtle;
+import ArknightsDoctorMod.cards.skill.Ace;
 import ArknightsDoctorMod.cards.skill.Defend;
 import ArknightsDoctorMod.helper.DoctorHelper;
 
@@ -124,13 +128,17 @@ public class Doctor extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for(int x = 0; x<4; x++) {
-            retVal.add(Strike.ID);
-        }
-        for(int x = 0; x<4; x++) {
-            retVal.add(Defend.ID);
-        }
+//        for(int x = 0; x<2; x++) {
+//            retVal.add(Strike.ID);
+//        }
+//        for(int x = 0; x<4; x++) {
+//            retVal.add(Defend.ID);
+//        }
+        retVal.add(Kroos.ID);
         retVal.add(Amiya.ID);
+        retVal.add(Ace.ID);
+        retVal.add(InfusedOriginiumSlug.ID);
+        retVal.add(Myrtle.ID);
         return retVal;
     }
 

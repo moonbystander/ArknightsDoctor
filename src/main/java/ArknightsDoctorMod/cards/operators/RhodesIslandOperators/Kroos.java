@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 
 public class Kroos extends RhodesIslandOperator {
     public static final String ID = DoctorHelper.MakePath("Kroos");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath(ID));
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
 
     public Kroos(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),DESCRIPTION,CardRarity.UNCOMMON,DoctorHelper.MakePath("Kroos"));
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),DESCRIPTION,CardRarity.UNCOMMON,DoctorHelper.MakePath("KroosPower"));
     }
 
 

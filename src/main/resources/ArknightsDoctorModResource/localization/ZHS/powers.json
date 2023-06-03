@@ -61,11 +61,25 @@
       "攻击时，20%几率当次攻击的攻击力提升至150%"
     ]
   },
-  "ArknigthsDoctorMod:InfusedOriginiumSlugPower": {
+  "ArknightsDoctorMod:InfusedOriginiumSlugPower": {
     "NAME": "高爆源石虫",
     "DESCRIPTIONS": [
       "当格挡被击破时，对所有敌人造成",
       "点伤害"
+    ]
+  },
+  "ArknightsDoctorMod:SupportbetaPower": {
+    "NAME": "支援号令β",
+    "DESCRIPTIONS": [
+      "接下来",
+      "回合，每回合获得2点能量"
+    ]
+  },
+  "ArknightsDoctorMod:HealingWingsPower": {
+    "NAME": "治愈之翼",
+    "DESCRIPTIONS": [
+      "接下来三回合，每回合获得1能量和",
+      "点生命"
     ]
   }
 

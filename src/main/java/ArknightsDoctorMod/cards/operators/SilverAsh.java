@@ -19,7 +19,7 @@ public class SilverAsh extends AbstractOperatorsCard {
     public static final String ID = DoctorHelper.MakePath("SilverAsh");
 
     public SilverAsh(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),DESCRIPTION,CardRarity.UNCOMMON,DoctorHelper.MakePath(
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),DESCRIPTION,CardRarity.RARE,DoctorHelper.MakePath(
                 "SilverAshPower"));
     }
 

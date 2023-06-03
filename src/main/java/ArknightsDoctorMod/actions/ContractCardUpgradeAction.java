@@ -33,13 +33,27 @@ public class ContractCardUpgradeAction extends AbstractGameAction {
                 canUpgradeChain.add(chain);
             }
         }
-        AbstractContractsChain upgradeChain=
-                canUpgradeChain.get(AbstractDungeon.cardRandomRng.random(canUpgradeChain.size() - 1));
+        AbstractContractsChain upgradeChain=null;
+        //无可更新词条时结束此action
+        if (canUpgradeChain.size()==0){
+            return;
+        }
+        if (canUpgradeChain.size()>1){
+            upgradeChain=
+                    canUpgradeChain.get(AbstractDungeon.cardRandomRng.random(canUpgradeChain.size() - 1));
+
+        }else {
+            upgradeChain=canUpgradeChain.get(0);
+        }
         upgradeChain.upgrade();
+        group.calculateContract();
 
         for (AbstractCard c:AbstractDungeon.player.masterDeck.group) {
             if (c.uuid.equals(card.uuid)){
+                //将卡组中的该词条也进行升级
+                ((AbstractContractCard)c).contractGroup.upgradeChain(upgradeChain);
                 c.upgrade();
+                c.applyPowers();
                 break;
             }
         }

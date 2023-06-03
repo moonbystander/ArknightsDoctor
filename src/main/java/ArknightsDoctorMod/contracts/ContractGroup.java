@@ -59,6 +59,17 @@ public class ContractGroup {
         this.addChain(new OriginiumZone_StimulusChain());
     }
 
+    //在AllContracts中根据ID寻找chain，并进行升级
+    public void upgradeChain(AbstractContractsChain chain){
+        for (AbstractContractsChain findchain:AllContracts) {
+            if (findchain.id.equals(chain.id)){
+                findchain.upgrade();
+                this.calculateContract();
+                return;
+            }
+        }
+    }
+
     public String getAttackString(){
         return "攻击力提升至"+this.attack*100+"%";
     }
@@ -74,6 +85,7 @@ public class ContractGroup {
     public String getDrawString(){
         return "额外抽"+this.draw+"张牌";
     }
+
 
 
 }

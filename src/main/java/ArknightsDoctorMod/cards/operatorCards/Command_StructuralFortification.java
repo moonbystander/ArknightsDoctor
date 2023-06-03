@@ -25,7 +25,6 @@ public class Command_StructuralFortification extends AbstractOperatorsExclusiveC
         super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.SKILL,CardTarget.SELF, Kaltsit.ID);
         this.baseBlock=4;
         this.baseMagicNumber=this.magicNumber=1;
-        AbstractCardModifier
     }
 
     @Override

@@ -6,6 +6,7 @@ import ArknightsDoctorMod.cards.AbstractContractCard;
 import ArknightsDoctorMod.contracts.AbstractContract;
 import ArknightsDoctorMod.contracts.AbstractContractsChain;
 import ArknightsDoctorMod.contracts.ContractGroup;
+import ArknightsDoctorMod.contracts.chain.Barrenland.OriginiumZone_SlugCardiacFusionChain;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import ArknightsDoctorMod.powers.InfusedOriginiumSlugPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -31,6 +32,7 @@ public class InfusedOriginiumSlug extends AbstractContractCard {
 
     public static final String ID = DoctorHelper.MakePath("InfusedOriginiumSlug");
     private static final CardStrings cardStrings= CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final CardStrings contractStrings= CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath("Contract"));
     public static final String NAME=cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static int COST = 1;
@@ -38,19 +40,32 @@ public class InfusedOriginiumSlug extends AbstractContractCard {
     private static int count=0;
 
     public InfusedOriginiumSlug(){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.SELF);
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION+String.format(cardStrings.EXTENDED_DESCRIPTION[0],
+                5,5),CardType.SKILL,
+                CardRarity.COMMON,
+                CardTarget.SELF);
         this.baseDamage=5;
         this.baseBlock=5;
         this.contractGroup.setPublicContracts();
+        this.contractGroup.addChain(new OriginiumZone_SlugCardiacFusionChain());
     }
 
     public InfusedOriginiumSlug(ContractGroup group){
-        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.SKILL,CardRarity.COMMON,CardTarget.SELF);
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,
+                DESCRIPTION+String.format(cardStrings.EXTENDED_DESCRIPTION[0],5,5),CardType.SKILL,CardRarity.COMMON,
+                CardTarget.SELF);
         this.baseDamage=5;
         this.baseBlock=5;
-        this.contractGroup=group;
+        //将group中的AllContracts里的元素拷贝到constractGroup中
+        for (AbstractContractsChain copychain:group.AllContracts) {
+            this.contractGroup.addChain(copychain.makeThisCopy());
+        }
+        this.contractGroup.calculateContract();
+
     }
 
+    //妈的合着奖励卡也是用的这个方法,改！
+    //目标：将contractGroup进行深拷贝，将AllContracts中的chain全部new一份出来，别共用
     @Override
     public AbstractCard makeCopy() {
         return new InfusedOriginiumSlug(this.contractGroup);
@@ -68,33 +83,40 @@ public class InfusedOriginiumSlug extends AbstractContractCard {
         }
         //更新描述
         //更好的方法应该是将词条以关键字的形式添加到描述信息里
+        int d= (int) (this.baseDamage*contractGroup.attack);
+        int b= (int) ((this.baseBlock+contractGroup.baseDefence)*contractGroup.defence);
+        int losshp= (int) (hp/contractGroup.hp);
+        int draw= contractGroup.draw;
 
-
-//        this.rawDescription = "修改后的文本";
-//        this.initializeDescription();
-        String EString = "";
-        if (this.contractGroup.attack!=1f){
-            EString+=contractGroup.getAttackString();
+        String Cname="";
+        for (AbstractContract c:applyContracts) {
+            Cname+=" "+c.name;
         }
-        if (this.contractGroup.baseDefence!=0){
-            EString+=contractGroup.getBaseDefenceString();
+        if (!Cname.equals("")){
+            this.rawDescription=
+                    Cname+"，"+String.format(cardStrings.EXTENDED_DESCRIPTION[0],b,d);
         }
-        if (this.contractGroup.defence!=1f){
-            EString+=contractGroup.getDefenceString();
-        }
-        if (this.contractGroup.hp!=1f){
-            EString+=contractGroup.getHpString();
-        }
-        if (this.contractGroup.draw!=0){
-            EString+=contractGroup.getDrawString();
-        }
-        this.rawDescription=DESCRIPTION+EString;
         initializeDescription();
 
     }
 
+    @Override
+    public void applyPowers() {
+        int d=(int) (this.baseDamage*contractGroup.attack);
+        int b=(int) ((this.baseBlock+contractGroup.baseDefence)*contractGroup.defence);
+        super.applyPowers();
+        ArrayList<AbstractContract> applyContracts=contractGroup.applyContracts;
+        String Cname="";
+        for (AbstractContract c:applyContracts) {
+            Cname+=" "+c.name;
+        }
 
-
+        if (!Cname.equals("")){
+            this.rawDescription=
+                    Cname+"，"+String.format(cardStrings.EXTENDED_DESCRIPTION[0],b,d);
+        }
+        initializeDescription();
+    }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
@@ -106,7 +128,7 @@ public class InfusedOriginiumSlug extends AbstractContractCard {
 
         if ( d >0 ){
             this.addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer,
-                    new InfusedOriginiumSlugPower(abstractPlayer,damage)));
+                    new InfusedOriginiumSlugPower(abstractPlayer,d)));
         }
         this.addToBot(new GainBlockAction(abstractPlayer,abstractPlayer,b));
         if ( losshp > 0){

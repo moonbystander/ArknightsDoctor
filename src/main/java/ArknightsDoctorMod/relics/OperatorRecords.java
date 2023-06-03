@@ -142,7 +142,7 @@ public class OperatorRecords extends CustomRelic implements OnPlayerDeathRelic {
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         int d=damageAmount;
-        if (!info.owner.isPlayer && ((Doctor)info.owner).trust > 100){
+        if (!info.owner.isPlayer && ((Doctor)AbstractDungeon.player).trust > 100){
             int result=(int) Math.floor(((((Doctor)info.owner).trust-100)*(((Doctor)info.owner).trust-100))/1000);
             d=d-result;
         }

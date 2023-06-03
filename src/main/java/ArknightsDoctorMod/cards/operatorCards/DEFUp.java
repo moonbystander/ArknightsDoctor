@@ -1,6 +1,7 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Beagle;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +17,11 @@ public class DEFUp extends AbstractOperatorsExclusiveCard {
     public static final String NAME=cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static int COST = 2;
+
+    public DEFUp(){
+        super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.POWER,CardTarget.SELF, Beagle.ID);
+        this.baseMagicNumber=this.magicNumber=1;
+    }
 
     public DEFUp(String operatorID){
         super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.POWER,CardTarget.SELF,operatorID);

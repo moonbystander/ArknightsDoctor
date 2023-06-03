@@ -1,6 +1,6 @@
 package ArknightsDoctorMod.cards.operators.RhodesIslandOperators;
 
-import ArknightsDoctorMod.cards.operatorCards.Chargeα;
+import ArknightsDoctorMod.cards.operatorCards.Chargealpha;
 import ArknightsDoctorMod.cards.operators.RhodesIslandOperator;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 public class Fang extends RhodesIslandOperator {
 
     public static final String ID = DoctorHelper.MakePath("Fang");
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath(ID));
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -20,6 +20,6 @@ public class Fang extends RhodesIslandOperator {
 
     @Override
     public void setStartOptions() {
-        this.addCardToOptions(new Chargeα(ID));
+        this.addCardToOptions(new Chargealpha(ID));
     }
 }

@@ -1,4 +1,9 @@
 {
+  "ArknightsDoctorMod:Contract": {
+    "NAME": "合约卡描述拓展",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["当前攻击力：%d","当前防御力:%d","当前生命:%d","额外抽%d张","耗能减少%d(耗能至少为0)"]
+  },
   "ArknightsDoctorMod:Strike": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害"
@@ -34,7 +39,7 @@
     "DESCRIPTION": "罗德岛重装干员米格鲁，将为队友提供坚实的防御力量。 NL 可以多对她说些鼓励的话。"
   }
   ,
-  "ArknightsDoctorMod:DEFUpα": {
+  "ArknightsDoctorMod:DEFUpalpha": {
     "NAME": "防御力强化·α型",
     "DESCRIPTION": "获得 !B! 格挡"
   }
@@ -58,7 +63,7 @@
     "NAME": "芬",
     "DESCRIPTION": "罗德岛先锋干员芬，将在战场上为小队赢得可观的优势。 NL 她跑得可真快。"
   },
-  "ArknightsDoctorMod:Chargeα": {
+  "ArknightsDoctorMod:Chargealpha": {
     "NAME": "冲锋号令·α型",
     "DESCRIPTION": "获得1点能量"
   },
@@ -66,13 +71,13 @@
     "NAME": "桃金娘",
     "DESCRIPTION": "罗德岛先锋干员桃金娘，将会带领其他干员冲锋陷阵！ NL 或许可以让她和凛冬交流一下。"
   },
-  "ArknightsDoctorMod:Supportβ": {
+  "ArknightsDoctorMod:Supportbeta": {
     "NAME": "支援号令·β型",
     "DESCRIPTION": "接下来 !M! 回合，每回合获得2能量"
   },
   "ArknightsDoctorMod:HealingWings": {
     "NAME": "治愈之翼",
-    "DESCRIPTION": "接下来五回合，每回合获得1能量和 !M! 点治疗"
+    "DESCRIPTION": "接下来三回合，每回合获得1能量和 !M! 点治疗"
   },
   "ArknightsDoctorMod:Kroos": {
     "NAME": "克洛丝",
@@ -88,7 +93,7 @@
   },
   "ArknightsDoctorMod:ViolinSolo": {
     "NAME": "小提琴独奏",
-    "DESCRIPTION": "信赖 NL获得 !B! 点格挡并恢复 !M! 点生命 "
+    "DESCRIPTION": "信赖 NL 获得 !B! 点格挡并恢复 !M! 点生命 "
   }
   ,
   "ArknightsDoctorMod:NoTimeResting": {
@@ -137,14 +142,6 @@
     "DESCRIPTION": "获得5信赖 NL 本回合打出的下一张干员专属牌耗能为0"
   }
   ,
-  "ArknightsDoctorMod:8": {
-    "NAME": "开棺",
-    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
-  },
-  "ArknightsDoctorMod:9": {
-    "NAME": "开棺",
-    "DESCRIPTION": "获得1点能量，打出5次后将其替换为 苏醒 。"
-  },
   "ArknightsDoctorMod:Ace": {
   "NAME": "祝你们前路无阻",
   "DESCRIPTION": "移除 ，使用后获得 壁垒 和50点格挡"
@@ -160,7 +157,12 @@
   ,
   "ArknightsDoctorMod:InfusedOriginiumSlug": {
     "NAME": "高爆源石虫",
-    "DESCRIPTION": "词条5 ，获得5格挡，当格挡被击破时，对所有敌人造成5伤害"
+    "DESCRIPTION": " 词条5 危机 (5),",
+    "EXTENDED_DESCRIPTION": ["获得 %d 点格挡，当格挡被击破时，对所有敌人造成 %d 点伤害"]
+  },
+  "ArknightsDoctorMod:KnowingEverything": {
+    "NAME": "无所不知",
+    "DESCRIPTION": "预言3"
   },
   "战地秘闻": {
     "NAME": "战地秘闻",

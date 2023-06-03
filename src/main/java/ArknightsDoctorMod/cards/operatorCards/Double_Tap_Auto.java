@@ -1,6 +1,7 @@
 package ArknightsDoctorMod.cards.operatorCards;
 
 import ArknightsDoctorMod.cards.AbstractOperatorsExclusiveCard;
+import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Kroos;
 import ArknightsDoctorMod.characters.Doctor;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -19,6 +20,10 @@ public class Double_Tap_Auto extends AbstractOperatorsExclusiveCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static int COST = 2;
 
+    public Double_Tap_Auto(){
+        super(ID,NAME, DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.ATTACK,CardTarget.ENEMY, Kroos.ID);
+        this.baseDamage=3;
+    }
 
     public Double_Tap_Auto(String operatorID){
         super(ID,NAME, DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.ATTACK,CardTarget.ENEMY,operatorID);

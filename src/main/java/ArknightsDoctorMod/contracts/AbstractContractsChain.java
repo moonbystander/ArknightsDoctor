@@ -59,9 +59,25 @@ public abstract class AbstractContractsChain {
 
     //返回当前词条
     public AbstractContract getContract(){
+
         return this.contracts.get(this.times-1);
     }
 
+
+    public AbstractContractsChain makeThisCopy(){
+        AbstractContractsChain chain=null;
+        try {
+            chain=this.getClass().newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        if (chain!=null){
+            chain.isapply=this.isapply;
+            chain.times=this.times;
+        }
+        return chain;
+
+    }
 
 
 

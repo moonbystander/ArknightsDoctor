@@ -91,9 +91,10 @@ public abstract class AbstractOperatorsCard extends CustomCard implements SpawnM
 
     public abstract void setStartOptions();
 
-    //从列表中移除一张牌
+    //从列表中移除一张牌,遍历列表，相同name移除
     public void removeCardToOptions(AbstractCard c){
-        this.options.remove(c);
+        this.options.removeIf(cc -> c.uuid.equals(cc.uuid));
+//        this.options.remove(c);
     }
 
     //获得与干员绑定的技能牌
