@@ -25,6 +25,10 @@ public abstract class AbstractMemoryCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        this.addToBot(new GetTrustAction(abstractPlayer,this.trustamount));
+        if (trustamount>0){
+            this.addToBot(new GetTrustAction(abstractPlayer,this.trustamount));
+        }else if (trustamount<0){
+            this.addToBot(new LossTrustAction(abstractPlayer,this.trustamount));
+        }
     }
 }

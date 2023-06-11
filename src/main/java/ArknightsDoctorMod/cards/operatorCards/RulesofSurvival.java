@@ -32,7 +32,7 @@ public class RulesofSurvival extends AbstractOperatorsExclusiveCard {
         if (!this.upgraded){
             this.upgradeName();
             this.upgradeBlock(3);
-            this.upgradeMagicNumber(3);
+            this.upgradeMagicNumber(2);
             this.upgradeBaseCost(2);
         }
     }

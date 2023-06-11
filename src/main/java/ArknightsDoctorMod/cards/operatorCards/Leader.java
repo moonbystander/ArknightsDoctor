@@ -15,20 +15,20 @@ public class Leader extends AbstractOperatorsExclusiveCard {
     private static final CardStrings cardStrings= CardCrawlGame.languagePack.getCardStrings(DoctorHelper.MakePath("Leader"));
     public static final String NAME=cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static int COST = 1;
+    private static int COST = 4;
     public static final String ID = DoctorHelper.MakePath("Leader");
 
     public Leader(){
         super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION,CardType.POWER,CardTarget.SELF, SilverAsh.ID);
-        this.baseMagicNumber=this.magicNumber=6;
+        this.baseMagicNumber=this.magicNumber=4;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded){
             this.upgradeName();
-            this.upgradeMagicNumber(-3);
-            this.upgradeBaseCost(0);
+            this.upgradeMagicNumber(-2);
+            this.upgradeBaseCost(2);
         }
     }
 

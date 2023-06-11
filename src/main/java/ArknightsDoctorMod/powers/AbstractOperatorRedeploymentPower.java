@@ -36,7 +36,6 @@ public abstract class AbstractOperatorRedeploymentPower extends AbstractPower {
     //当power被移除时，添加一个行动用以将与此power绑定的card置入抽卡堆
     @Override
     public void onRemove() {
-        System.out.println("RedeploymentPower Remove");
         Doctor doctor= (Doctor) AbstractDungeon.player;
         this.addToBot(new CardMoveAction(card,doctor.OperatorsWaiting,doctor.drawPile,true));
     }

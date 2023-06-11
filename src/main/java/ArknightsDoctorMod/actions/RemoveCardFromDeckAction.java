@@ -22,7 +22,7 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
         AbstractCard c;
         Iterator<AbstractCard> it= AbstractDungeon.player.masterDeck.group.iterator();
         while(it.hasNext()) {
-            c = (AbstractCard)it.next();
+            c = it.next();
             if (c.uuid.equals(removeCard.uuid)) {
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 break;

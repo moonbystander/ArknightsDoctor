@@ -100,6 +100,10 @@
     "NAME": "还不能休息！",
     "DESCRIPTION": "信赖 NL 博士，您还有许多事情需要处理。现在还不能休息哦。 NL 失去2点生命，下回合额外获得1能量和 !M! 张牌"
   },
+  "ArknightsDoctorMod:Dynamometer": {
+    "NAME": "凯尔希握力计",
+    "DESCRIPTION": "获得1点力量，对敌人造成 !D! 点伤害。"
+  },
   "ArknightsDoctorMod:RulesofSurvival": {
     "NAME": "雪境生存法则",
     "DESCRIPTION": "每回合获得 !B! 点格挡，恢复 !M! 点生命"
@@ -111,8 +115,13 @@
   }
   ,
   "ArknightsDoctorMod:Pignus": {
-    "NAME": "我与最后的赌注 no",
-    "DESCRIPTION": "生命减少到1，回合结束时获得一个额外回合。"
+    "NAME": "我与最后的赌注",
+    "DESCRIPTION": "移除 生命减少到1，回合结束时获得一个额外回合。",
+    "UPGRADE_DESCRIPTION": "移除 保留 NL 生命减少到1，回合结束时获得一个额外回合。"
+  },
+  "ArknightsDoctorMod:AngerSpreading": {
+    "NAME": "怒意漫延",
+    "DESCRIPTION": "使目标获得 激怒 2。获得 !M! 能量，并选择一名处于再部署的干员加入手牌。 NL 消耗 现在，愤恨不再需要理由。"
   },
   "ArknightsDoctorMod:Kaltsit": {
     "NAME": "凯尔希",
@@ -130,12 +139,72 @@
   }
   ,
   "ArknightsDoctorMod:Saria": {
-    "NAME": "赛雷娅 no",
-    "DESCRIPTION": "干员 NL 获得 !M! 层缓冲 NL 消耗 。"
+    "NAME": "塞雷娅",
+    "DESCRIPTION": "前莱茵生命研究员塞雷娅，将是防御与治疗并重的战场核心。即使是钻石，都比她要懂得变通啊。 NL 若手牌中有 伊芙利特 ，获得 壁垒，若手牌中有 赫默 ，获得4点格挡1信赖。 NL 莱茵生命 "
+  },
+  "ArknightsDoctorMod:FirstAid": {
+    "NAME": "急救",
+    "DESCRIPTION": "当生命少于50%时才可打出，恢复 !D! 生命。"
+  },
+  "ArknightsDoctorMod:MedicineDispensing": {
+    "NAME": "药物配置",
+    "DESCRIPTION": "恢复 !D! 生命"
+  },
+  "ArknightsDoctorMod:RhineChargedSuit": {
+    "NAME": "莱茵充能护服",
+    "DESCRIPTION": "每三回合获得1力量1敏捷，最多获得5次"
+  },
+  "ArknightsDoctorMod:DirectorOfDefense": {
+    "NAME": "前防卫科主任",
+    "DESCRIPTION": "造成 !D! 点伤害，获得 !B! 点格挡 NL 莱茵科技 1"
+  },
+  "ArknightsDoctorMod:Silence": {
+    "NAME": "赫默",
+    "DESCRIPTION": "若手牌中有伊芙利特，获得4格挡，若手牌中有塞雷娅，恢复3生命，获得1信赖。 NL 莱茵生命 "
+  },
+  "ArknightsDoctorMod:MedicalDrone": {
+    "NAME": "医疗无人机",
+    "DESCRIPTION": "接下来 !M! 回合，每回合恢复3生命"
+  },
+  "ArknightsDoctorMod:RhineTech": {
+    "NAME": "莱茵科技",
+    "DESCRIPTION": "获得 !M! 层莱茵科技"
+  },
+  "ArknightsDoctorMod:DirectorOfPersonnel": {
+    "NAME": "人事部主任",
+    "DESCRIPTION": "减少所有莱茵生命干员再部署时长1"
+  },
+  "ArknightsDoctorMod:Ifrit": {
+    "NAME": "伊芙利特",
+    "DESCRIPTION": "若手牌中有赫默，获得1能量，若手牌中有塞雷娅，抽2张牌。 NL 莱茵生命 "
+  },
+  "ArknightsDoctorMod:Ptilopsis": {
+    "NAME": "白面鸮",
+    "DESCRIPTION": "若手牌中有塞雷娅、赫默、伊芙利特之一，恢复3生命。 NL 莱茵生命"
+  },
+  "ArknightsDoctorMod:Mayer": {
+    "NAME": "梅尔",
+    "DESCRIPTION": "NL 莱茵生命 "
+  },
+  "ArknightsDoctorMod:Magallan": {
+    "NAME": "麦哲伦",
+    "DESCRIPTION": "NL 莱茵生命 "
+  },
+  "ArknightsDoctorMod:Skadi": {
+    "NAME": "斯卡蒂",
+    "DESCRIPTION": "NL 深海猎人"
+  },
+  "ArknightsDoctorMod:Gladiia": {
+    "NAME": "歌蕾蒂娅",
+    "DESCRIPTION": "NL 深海猎人"
+  },
+  "ArknightsDoctorMod:Specter": {
+    "NAME": "幽灵鲨",
+    "DESCRIPTION": "NL 深海猎人"
   },
   "ArknightsDoctorMod:Tactics_Retreat": {
     "NAME": "战术：撤退",
-    "DESCRIPTION": "获得5信赖 NL 选择一名正在等待再部署的干员，使其 #y退场 "
+    "DESCRIPTION": "获得等于罗德岛战术层数 !M! 倍的信赖 NL 选择一名手牌中的干员，使其 退场 "
   },
   "ArknightsDoctorMod:Tactics_Command": {
     "NAME": "战术：指挥",
@@ -155,18 +224,100 @@
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗 。"
   }
   ,
+  "ArknightsDoctorMod:PoisonedWine": {
+    "NAME": "一杯毒酒",
+    "DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层中毒，抽1张牌。 NL “干杯，马克维茨。”"
+  },
   "ArknightsDoctorMod:InfusedOriginiumSlug": {
     "NAME": "高爆源石虫",
     "DESCRIPTION": " 词条5 危机 (5),",
     "EXTENDED_DESCRIPTION": ["获得 %d 点格挡，当格挡被击破时，对所有敌人造成 %d 点伤害"]
   },
-  "ArknightsDoctorMod:KnowingEverything": {
-    "NAME": "无所不知",
-    "DESCRIPTION": "预言3"
+  "ArknightsDoctorMod:MudrockZealot": {
+    "NAME": "泥岩小队践行者",
+    "DESCRIPTION": "词条5 危机 (10),",
+    "EXTENDED_DESCRIPTION": ["获得 %d 点格挡，若敌方回合结束时仍有护甲，则获得1能量并抽 %d 张牌"]
   },
-  "战地秘闻": {
-    "NAME": "战地秘闻",
-    "DESCRIPTION": "战地秘闻"
+  "ArknigthsDoctorMod:SarkazLancer": {
+    "NAME": "萨卡兹穿刺手",
+    "DESCRIPTION": "词条5 危机 (10) 本卡不受化合物X影响 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "%dX回合后对目标造成 %d*(3X)点伤害"
+    ]
+  },
+  "ArknightsDoctorMod:Crownslayer": {
+    "NAME": "弑君者",
+    "DESCRIPTION": "词条5 危机 (10)",
+    "EXTENDED_DESCRIPTION": [
+      "获得%d层无实体,每%d回合获得一层无实体,每%d回合获得%d点能量"
+    ]
+  },
+  "ArknightsDoctorMod:KnowingEverything": {
+    "NAME": "无所不知の凯",
+    "DESCRIPTION": "回合开始时， 预见 !M! NL “我无所不知” NL ————骑兵与猎人"
+  },
+  "ArknightsDoctorMod:DoctorInGym": {
+    "NAME": "《博士在健身房》",
+    "DESCRIPTION": "在每回合开始时获得 !M! 点力量和 !M! 点敏捷"
+  },
+  "ArknightsDoctorMod:ThrowingStones":{
+    "NAME": "狂暴投石组长",
+    "DESCRIPTION":"造成1点伤害，将卡组中的阿米娅召唤到手牌。"
+  },
+  "ArknightsDoctorMod:SoEasy": {
+    "NAME": "非常简单",
+    "DESCRIPTION": "恶灵 50 ，选择手中的一张合约卡，进行一次随机词条强化",
+    "UPGRADE_DESCRIPTION": "恶灵 50 ，选择手中的一张合约卡，进行一次随机词条强化。 NL 保留"
+  },
+  "ArknightsDoctorMod:SacrificeStrategy": {
+    "NAME": "弃子争先",
+    "DESCRIPTION":"消耗 恶灵 5，使一张干员退场，使所有再部署减少 !M! ",
+    "UPGRADE_DESCRIPTION": "消耗 保留 恶灵 5 ，使一张干员退场，使所有再部署减少 !M! "
+  },
+  "ArknightsDoctorMod:SacrificeForTime": {
+    "NAME": "满门忠烈",
+    "DESCRIPTION": "恶灵 5 ，所有处于非再部署状态的干员进入再部署状态，再选择一名干员加入手牌。每使一名干员进入再部署获得 !M! 点格挡"
+  },
+  "ArknightsDoctorMod:LastDefend": {
+    "NAME": "最后防线",
+    "DESCRIPTION": "获得 !B! 点格挡。如果你没有格挡，再获得 !B! 点格挡，并抽 !M! 张牌"
+  },
+  "ArknightsDoctorMod:HeatedPaths": {
+    "NAME": "热泵通道",
+    "DESCRIPTION": "回合开始时，对所有敌人造成 !D! 点伤害"
+  },
+  "ArknightsDoctorMod:ActiveOriginium": {
+    "NAME": "活性源石",
+    "DESCRIPTION": "获得 !M! 点力量。回合开始时失去5点生命并抽1张牌，"
+  },
+  "ArknightsDoctorMod:ZhiPaoSekipo": {
+    "NAME": "只炮的魔术",
+    "DESCRIPTION": "给予所有敌人3层无实体，每回合打出第 !M! 张干员牌时，击晕所有敌人。"
+  },
+  "ArknightsDoctorMod:TacticianOfJudiciousStrategizing": {
+    "NAME": "谋断的战术家",
+    "DESCRIPTION": "所有干员再部署所需时长减少1层",
+    "UPGRADE_DESCRIPTION": "固有 NL 所有干员再部署所需时长减少1层"
+  },
+  "ArknightsDoctorMod:StrategizeBehindTheScenes": {
+    "NAME": "运筹帷幄",
+    "DESCRIPTION": "每当打出干员牌时获得 !B!点 护甲并额外获得1点信赖"
+  },
+  "ArknightsDoctorMod:Prepared": {
+    "NAME": "充分准备",
+    "DESCRIPTION": "若本回合打出至少张 !M! 干员牌，则回合结束时将手牌中的所有专属牌耗能降低1点"
+  },
+  "ArknightsDoctorMod:DivergentVision": {
+    "NAME": "放射性视界",
+    "DESCRIPTION": "手牌上限增加 !M! 张"
+  },
+  "ArknightsDoctorMod:RiskPrevention": {
+    "NAME": "未雨绸缪",
+    "DESCRIPTION": "回合结束时，获得手中的专属牌数量 !B! 倍的格挡"
+  },
+  "ArknightsDoctorMod:TheGhostOfBabelTower": {
+    "NAME": "巴别塔的恶灵",
+    "DESCRIPTION": "恶灵 5，回合开始时减少20信赖，获得 !M! 能量，抽2张牌，并降低 !M! 点手中专属牌的耗能，直到信赖少于50。"
   },
   "洪炉示岁": {
     "NAME": "洪炉示岁",
@@ -175,10 +326,6 @@
   "午间逸话": {
     "NAME": "午间逸话",
     "DESCRIPTION": "午间逸话"
-  },
-  "乌萨斯的孩子们": {
-    "NAME": "乌萨斯的孩子们",
-    "DESCRIPTION": "乌萨斯的孩子们"
   },
   "踏寻往昔之风":{
     "NAME": "踏寻往昔之风",
@@ -212,8 +359,40 @@
     "NAME": "春分",
     "DESCRIPTION": "春分"
   },
-  "骑兵与猎人": {
-    "NAME": "骑兵与猎人",
-    "DESCRIPTON": "骑兵与猎人"
+  "ArknightsDoctorMod:KnightTreasure": {
+    "NAME": "滴水村的骑士宝藏",
+    "DESCRIPTION": "移除 向弃牌堆中添加一张 宝藏位置 ，向抽卡堆添加一张 布雷奥甘的融芯钥匙 ，当两张卡都在本场战斗中被使用过，战斗结束后可获得一件随机遗物。"
+  },
+  "ArknightsDoctorMod:Treasure": {
+    "NAME": "宝藏位置",
+    "DESCRIPTION": "骑士宝藏近在眼前。 NL 消耗"
+  },
+  "ArknightsDoctorMod:TreasureKey": {
+    "NAME": "布雷奥甘的融芯钥匙",
+    "DESCRIPTION": "一把神秘的钥匙，能够打开骑士宝藏。向弃牌堆中添加三张 赏金猎人 。 NL 消耗"
+  },
+  "ArknightsDoctorMod:BountyHunter": {
+    "NAME": "赏金猎人",
+    "DESCRIPTION": "被消耗时对你造成3点伤害。 NL 虚无"
+  },
+  "ArknightsDoctorMod:YouAreScrewed": {
+    "NAME": "你们完蛋了。",
+    "DESCRIPTION":"对所有敌人造成 !D! 点伤害。 NL 来自愤怒虎鲸的威胁 NL 消耗"
+  },
+  "ArknightsDoctorMod:Candlestick": {
+    "NAME":"烛台",
+    "DESCRIPTION": "获得 !B! 点格挡，获得 第二场大火 ，大火结束后获得持续三回合的 饥饿 ，并向弃牌堆添加三张 索尼娅的噩梦 NL 消耗"
+  },
+  "ArknightsDoctorMod:Sonya'sNightmare": {
+    "NAME": "索尼娅的噩梦",
+    "DESCRIPTION": " 不能被打出 。 NL 回合结束时若在手牌则对自己造成4点伤害 NL 保留"
+  },
+  "ArknightsDoctorMod:Windmill": {
+    "NAME": "大风车",
+    "DESCRIPTION": "对随机目标造成 !D! 点伤害 !M! 次，并打乱本回合手牌的费用"
+  },
+  "ArknightsDoctorMod:BlackCountry": {
+    "NAME":"黑色国度",
+    "DESCRIPTION": "接下来在本回合每打出一张技能牌，使全体敌人失去2力量 NL 恶灵 5 消耗"
   }
 }

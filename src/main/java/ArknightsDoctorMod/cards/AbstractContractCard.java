@@ -15,11 +15,14 @@ import java.util.Iterator;
 public abstract class AbstractContractCard extends CustomCard {
 
     public ContractGroup contractGroup=new ContractGroup();
+    public int count=0;
 
     public AbstractContractCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                                  CardRarity rarity, CardTarget target) {
         super(id, name, img, cost, rawDescription, type, Doctor.Enums.DOCTOR_CARD, rarity, target);
     }
+
+
 
 
     @Override
@@ -32,10 +35,12 @@ public abstract class AbstractContractCard extends CustomCard {
     @Override
     public AbstractCard makeCopy() {
         try {
-            return (AbstractCard) this.getClass().getConstructor(ContractGroup.class).newInstance(this.contractGroup);
+            AbstractContractCard makeCard=
+                    this.getClass().getConstructor(ContractGroup.class).newInstance(this.contractGroup);
+            makeCard.count=this.count;
+            return makeCard;
         } catch (InstantiationException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             throw new RuntimeException("BaseMod failed to auto-generate makeCopy for card: " + this.cardID);
         }
-
     }
 }

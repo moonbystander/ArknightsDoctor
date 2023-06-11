@@ -1,7 +1,9 @@
 package ArknightsDoctorMod.relics;
 
 import ArknightsDoctorMod.actions.ChooseCardsToHandAction;
+import ArknightsDoctorMod.actions.ContractCardVictoryAction;
 import ArknightsDoctorMod.actions.CopyCardsToHandAction;
+import ArknightsDoctorMod.cards.AbstractContractCard;
 import ArknightsDoctorMod.cards.AbstractOperatorsCard;
 import ArknightsDoctorMod.helper.DoctorHelper;
 import basemod.abstracts.CustomRelic;
@@ -32,6 +34,11 @@ public class PRTS extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
+    @Override
+    public void atPreBattle() {
+        count=0;
+    }
+
     //前三回合生效，第一回合从抽牌堆挑选一张干员牌加入手牌，第二回合获得10点格挡，第三回合获得一点能量
     public void atTurnStart() {
         if (count < 3){
@@ -52,4 +59,15 @@ public class PRTS extends CustomRelic {
         }
     }
 
+    //将所有合约卡的count复制到卡组中
+    @Override
+    public void onVictory() {
+        ArrayList<AbstractContractCard> contractCardList=new ArrayList<>();
+        for (AbstractCard c:AbstractDungeon.player.masterDeck.group) {
+            if (c instanceof AbstractContractCard){
+                contractCardList.add((AbstractContractCard) c);
+            }
+        }
+        this.addToBot(new ContractCardVictoryAction(contractCardList));
+    }
 }

@@ -28,7 +28,7 @@ public class ViolinSolo extends AbstractMemoryCard {
     public void upgrade() {
         if (!this.upgraded){
             this.upgradeName();
-            this.upgradeBlock(4);
+            this.upgradeBlock(3);
             this.upgradeMagicNumber(2);
             this.trustamount+=1;
         }

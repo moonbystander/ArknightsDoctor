@@ -8,6 +8,7 @@ import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Kroos;
 import ArknightsDoctorMod.cards.operators.RhodesIslandOperators.Myrtle;
 import ArknightsDoctorMod.cards.skill.Ace;
 import ArknightsDoctorMod.cards.skill.Defend;
+import ArknightsDoctorMod.cards.states.SonyasNightmare;
 import ArknightsDoctorMod.helper.DoctorHelper;
 
 
@@ -22,6 +23,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.green.Nightmare;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -131,14 +133,17 @@ public class Doctor extends CustomPlayer {
 //        for(int x = 0; x<2; x++) {
 //            retVal.add(Strike.ID);
 //        }
-//        for(int x = 0; x<4; x++) {
-//            retVal.add(Defend.ID);
-//        }
-        retVal.add(Kroos.ID);
+        for(int x = 0; x<4; x++) {
+            retVal.add(Defend.ID);
+        }
+/*        retVal.add(Kroos.ID);
         retVal.add(Amiya.ID);
         retVal.add(Ace.ID);
         retVal.add(InfusedOriginiumSlug.ID);
-        retVal.add(Myrtle.ID);
+        retVal.add(Myrtle.ID);*/
+
+        retVal.add(SonyasNightmare.ID);
+        retVal.add(Ace.ID);
         return retVal;
     }
 
@@ -149,6 +154,9 @@ public class Doctor extends CustomPlayer {
         retVal.add(PRTS.ID);
         retVal.add(Laevatain.ID);
         retVal.add(OperatorRecords.ID);
+        //test
+        retVal.add("Medical Kit");
+
         return retVal;
     }
 

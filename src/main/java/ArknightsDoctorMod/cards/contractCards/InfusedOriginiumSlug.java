@@ -37,7 +37,7 @@ public class InfusedOriginiumSlug extends AbstractContractCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static int COST = 1;
     private static int hp=5;
-    private static int count=0;
+    //不能静态，不然所有合约卡都共用一个计数器了
 
     public InfusedOriginiumSlug(){
         super(ID,NAME,DoctorHelper.GetTestImgPath(),COST,DESCRIPTION+String.format(cardStrings.EXTENDED_DESCRIPTION[0],
@@ -68,6 +68,8 @@ public class InfusedOriginiumSlug extends AbstractContractCard {
     //目标：将contractGroup进行深拷贝，将AllContracts中的chain全部new一份出来，别共用
     @Override
     public AbstractCard makeCopy() {
+        InfusedOriginiumSlug makeCard=new InfusedOriginiumSlug(this.contractGroup);
+        makeCard.count=this.count;
         return new InfusedOriginiumSlug(this.contractGroup);
     }
 

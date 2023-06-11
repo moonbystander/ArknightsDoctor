@@ -81,6 +81,161 @@
       "接下来三回合，每回合获得1能量和",
       "点生命"
     ]
+  },
+  "ArknightsDoctorMod:HeatedPathsPower": {
+    "NAME": "热泵通道",
+    "DESCRIPTIONS": [
+      "回合开始时，对敌人造成",
+      "点伤害"
+    ]
+  },
+  "ArknightsDoctorMod:SecondFireDisasterPower": {
+    "NAME":"第二场大火",
+    "DESCRIPTIONS": [
+      "回合结束时，对全体敌人造成呈等比递增的伤害。本回合造成",
+      "点伤害。"
+    ]
+  },
+  "ArknightsDoctorMod:IntolerableHungerPower": {
+    "NAME": "难忍的饥饿",
+    "DESCRIPTIONS": [
+      "回合开始时失去1能量，丢弃一张手牌。"
+    ]
+  },
+  "ArknightsDoctorMod:ZhiPaoSekipoPower": {
+    "NAME": "奇迹的魔术师",
+    "DESCRIPTIONS": [
+      "再打出",
+      "张干员牌，将击晕所有敌人"
+    ]
+  },
+  "ArknightsDoctorMod:MudrockZealotPower": {
+    "NAME": "泥岩小队践行者",
+    "DESCRIPTIONS": [
+      "如果敌人回合结束时仍有护甲，抽",
+      " 张牌。"
+    ]
+  },
+  "ArknightsDoctorMod:FitnessGuideBySiderocaPower": {
+    "NAME": "铸铁的健身指导",
+    "DESCRIPTIONS": [
+      "在每回合开始时获得",
+      "点力量和敏捷"
+    ]
+  },
+  "ArknightsDoctorMod:TacticianOfJudiciousStrategizingPower": {
+    "NAME": "谋断的战术家",
+    "DESCRIPTIONS": [
+      "当打出干员牌时，减少该干员1层的再部署时长"
+    ]
+  },
+  "ArknightsDoctorMod:ActiveOriginiumPower": {
+    "NAME": "活性源石",
+    "DESCRIPTIONS": [
+      "回合开始时失去5点生命，并抽",
+      "张牌"
+    ]
+  },
+  "ArknightsDoctorMod:CapacityExpansionPower": {
+    "NAME": "手牌上限增加",
+    "DESCRIPTIONS": [
+      "手牌上限增加",
+      "张"
+    ]
+  },
+  "ArknightsDoctorMod:SarkazLancerPower": {
+    "NAME": "冲锋",
+    "DESCRIPTIONS": [
+      "加速中，",
+      "回合后受到",
+      "点伤害"
+    ]
+  },
+  "ArknightsDoctorMod:StrategizeBehindTheScenesPower": {
+    "NAME": "运筹帷幄",
+    "DESCRIPTIONS": [
+      "每打出一张干员牌获得",
+      "点格挡并额外获得1点信赖"
+    ]
+  },
+  "ArknightsDoctorMod:CrownslayerPower": {
+    "NAME": "闪现",
+    "DESCRIPTIONS": [
+      "还需",
+      "回合获得一层无实体，还需",
+      "回合获得",
+      "点能量"
+    ]
+  },
+  "ArknightsDoctorMod:PreparedPower": {
+    "NAME": "充分准备",
+    "DESCRIPTONS": [
+      "还需",
+      "名干员,才能完成充分"
+    ]
+  },
+  "ArknightsDoctorMod:RiskPreventionPower": {
+    "NAME": "未雨绸缪",
+    "DESCRIPTIONS": [
+      "回合结束时获得手中专属牌数",
+      "倍的格挡。"
+    ]
+  },
+  "ArknightsDoctorMod:BlackCountryPower": {
+    "NAME": "黑色国度",
+    "DESCRIPTIONS": [
+      "接下来在本回合每打出一张技能牌，使全体敌人失去2力量"
+    ]
+  },
+  "ArknigtsDoctorMod:KnightTreasurePower": {
+    "NAME": "打开骑士宝藏",
+    "DESCRIPTIONS": [
+      "还需要",
+      " 宝藏位置 ",
+      " 融芯钥匙 ",
+      "成功打开宝藏！"
+    ]
+  },
+  "ArknightsDoctorMod:ForVictory": {
+    "NAME": "许诺胜利",
+    "DESCRIPTIONS": [
+      "回合开始时减少20信赖，获得",
+      "能量，抽2张牌，并降低",
+      "点手中专属牌的耗能。",
+      "信赖少于50时移除该效果。"
+    ]
+  },
+  "ArknightsDoctorMod:RhineLabPower": {
+    "NAME": "莱茵科技",
+    "DESCRIPTIONS": [
+      "层数达到20时，胜利后随机升级一张卡。达到50时，再升级一张并获得5点生命上限。达到100时，再获得一件随机遗物。"
+    ]
+  },
+  "ArknightsDoctorMod:AbyssalHuntersPower": {
+    "NAME": "深海猎人血脉相连",
+    "DESCRIPTIONS": [
+      "当你打出深海猎人时，将所有深海猎人再部署时长减1"
+    ]
+  },
+  "ArknightsDoctorMod:spPower": {
+    "NAME": "技力",
+    "DESCRIPTIONS": [
+      "每打出一张牌获得1点技力，每10点技力可以代替专属牌的1耗能",
+      "暂时没时间做"
+    ]
+  },
+  "ArknightsDoctorMod:RhineChargedSuitPower": {
+    "NAME": "莱茵充能护服",
+    "DESCRIPTIONS": [
+      "回合后获得1力量1敏捷",
+      "充能完成"
+    ]
+  },
+  "ArknightsDoctorMod:MedicalDronePower": {
+    "NAME": "医疗无人机",
+    "DESCRIPTIONS": [
+      "接下来",
+      "回合，每回合恢复3生命"
+    ]
   }
-
 }
